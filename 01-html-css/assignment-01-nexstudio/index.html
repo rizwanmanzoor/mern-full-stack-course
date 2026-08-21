@@ -8,14 +8,17 @@
       href="https://nexstudio.demos.tailgrids.com/favicon.png"
       type="image/x-icon"
     />
-    <title>NexStudio - React Agency Website Template</title>
+    <title>NexStudio</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" />
+
     <meta name="title" content="NexStudio - React Agency Website Template" />
     <meta
       name="description"
@@ -24,43 +27,45 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header container">
-      <nav class="header__nav">
-        <a class="header__logo" href="/">
-          <img
-            class="logo"
-            src="https://nexstudio.demos.tailgrids.com/images/layout/logo-black.svg"
-            alt="NexStudio logo"
-          />
-        </a>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="header__logo" href="/">
+            <img
+              class="logo"
+              src="https://nexstudio.demos.tailgrids.com/images/layout/logo-black.svg"
+              alt="NexStudio logo"
+            />
+          </a>
 
-        <ul class="header__links">
-          <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">BLOG</a></li>
-        </ul>
+          <ul class="header__links">
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">BLOG</a></li>
+          </ul>
 
-        <a href="#" class="btn btn--primary">GET STARTED</a>
-      </nav>
+          <a href="#" class="button button--primary">GET STARTED</a>
+        </nav>
+      </div>
     </header>
 
     <main>
       <!-- Hero -->
       <section class="hero container">
-        <h1>
+        <h1 class="hero__title">
           We Build <i>Digital Products</i> <br />
           That Drive Growth.
         </h1>
 
-        <p>
+        <p class="hero__para">
           From startups to global brands — we design, develop, and deliver
           <br />
           high-performing web and mobile solutions that turn ideas into impact.
         </p>
 
-        <div class="hero__btns">
-          <a href="#" class="btn btn--primary">
+        <div class="hero__actions">
+          <a href="#" class="button button--primary">
             EXPLORE PROJECTS
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -76,13 +81,43 @@
               ></path>
             </svg>
           </a>
-          <a href="#" class="btn btn--secondary">CONTACT US</a>
+          <a href="#" class="button button--secondary">CONTACT US</a>
         </div>
       </section>
 
-      <!-- Client logos -->
-      <section class="client-logos">
-        <ul class="client-logos__list">
+      <!-- logos -->
+      <section class="logos">
+        <ul class="logos__list">
+          <li>
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+              alt="logoipsum"
+            />
+          </li>
+          <li>
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-2.svg"
+              alt="logoipsum"
+            />
+          </li>
+          <li>
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+              alt="logoipsum"
+            />
+          </li>
+          <li>
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-2.svg"
+              alt="logoipsum"
+            />
+          </li>
+          <li>
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+              alt="logoipsum"
+            />
+          </li>
           <li>
             <img
               src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
@@ -127,16 +162,16 @@
       <section class="about">
         <div class="container about__inner">
           <div class="about__intro">
-            <h2>A Team of Builders & Innovators</h2>
+            <h2>A Team of Builders & <i>Innovators</i></h2>
           </div>
 
           <div class="about__content">
-            <p>
-              we combine creativity with engineering discipline to build products
-              that users love.
+            <p class="about__content__title">
+              we combine creativity with engineering discipline to build
+              products that users love.
             </p>
 
-            <p>
+            <p class="about__content__para">
               From early-stage
               <span
                 >startups to established enterprises, we help our clients
@@ -144,7 +179,7 @@
               >
             </p>
 
-            <div>
+            <div class="about__stats">
               <dl>
                 <dt>5K+</dt>
                 <dd>Projects Delivered</dd>
@@ -161,454 +196,470 @@
 
       <!-- Partner -->
       <section class="partner">
-        <h2 class="title">Why Partner With Us</h2>
+        <div class="container">
+          <h2 class="partner__title">Why Partner <i>With Us</i></h2>
 
-        <div class="partner__list">
-          <article class="partner__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-            >
-              <g clip-path="url(#clip0_14188_534)">
-                <path
-                  d="M56 0C56 7.73194 49.7319 14 42 14C49.7319 14 56 20.2681 56 28C56 35.7319 49.7319 42 42 42C49.7319 42 56 48.2681 56 56H0C0 48.2681 6.26806 42 14 42C6.26806 42 0 35.7319 0 28C0 20.2681 6.26806 14 14 14C6.26806 14 0 7.73194 0 0H56Z"
-                  fill="url(#paint0_linear_14188_534)"
-                ></path>
-              </g>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_14188_534"
-                  x1="28"
-                  y1="0"
-                  x2="28"
-                  y2="56"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#545454"></stop>
-                  <stop offset="1" stop-color="#BABABA"></stop>
-                </linearGradient>
-                <clipPath id="clip0_14188_534">
-                  <rect width="56" height="56" fill="white"></rect>
-                </clipPath>
-              </defs>
-            </svg>
-            <h3>Custom Solutions</h3>
-            <p>
-              Tailored software crafted to meet your unique business challenges
-              and goals.
-            </p>
-          </article>
+          <div class="partner__list">
+            <article class="partner__item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 56 56"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_14188_534)">
+                  <path
+                    d="M56 0C56 7.73194 49.7319 14 42 14C49.7319 14 56 20.2681 56 28C56 35.7319 49.7319 42 42 42C49.7319 42 56 48.2681 56 56H0C0 48.2681 6.26806 42 14 42C6.26806 42 0 35.7319 0 28C0 20.2681 6.26806 14 14 14C6.26806 14 0 7.73194 0 0H56Z"
+                    fill="url(#paint0_linear_14188_534)"
+                  ></path>
+                </g>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14188_534"
+                    x1="28"
+                    y1="0"
+                    x2="28"
+                    y2="56"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#545454"></stop>
+                    <stop offset="1" stop-color="#BABABA"></stop>
+                  </linearGradient>
+                  <clipPath id="clip0_14188_534">
+                    <rect width="56" height="56" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3>Custom Solutions</h3>
+              <p>
+                Tailored software crafted to meet your unique business
+                challenges and goals.
+              </p>
+            </article>
 
-          <article class="partner__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-            >
-              <g clip-path="url(#clip0_14189_612)">
-                <path
-                  d="M28 14L35 7.21875L42.1094 0H56V14L42 28H41.8906L49 35.2188L56 42V56H42L28 42L21 48.7812L13.8906 56H0V42L14 28H14.1094L7 20.7812L0 14V0H14L28 14Z"
-                  fill="url(#paint0_linear_14189_612)"
-                ></path>
-              </g>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_14189_612"
-                  x1="28"
-                  y1="0"
-                  x2="28"
-                  y2="56"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#545454"></stop>
-                  <stop offset="1" stop-color="#BABABA"></stop>
-                </linearGradient>
-                <clipPath id="clip0_14189_612">
-                  <rect width="56" height="56" fill="white"></rect>
-                </clipPath>
-              </defs>
-            </svg>
-            <h3>Dedicated Support</h3>
-            <p>
-              Reliable assistance and maintenance to ensure your systems run
-              smoothly.
-            </p>
-          </article>
+            <article class="partner__item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 56 56"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_14189_612)">
+                  <path
+                    d="M28 14L35 7.21875L42.1094 0H56V14L42 28H41.8906L49 35.2188L56 42V56H42L28 42L21 48.7812L13.8906 56H0V42L14 28H14.1094L7 20.7812L0 14V0H14L28 14Z"
+                    fill="url(#paint0_linear_14189_612)"
+                  ></path>
+                </g>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14189_612"
+                    x1="28"
+                    y1="0"
+                    x2="28"
+                    y2="56"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#545454"></stop>
+                    <stop offset="1" stop-color="#BABABA"></stop>
+                  </linearGradient>
+                  <clipPath id="clip0_14189_612">
+                    <rect width="56" height="56" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3>Dedicated Support</h3>
+              <p>
+                Reliable assistance and maintenance to ensure your systems run
+                smoothly.
+              </p>
+            </article>
 
-          <article class="partner__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-            >
-              <g clip-path="url(#clip0_14189_615)">
-                <path
-                  d="M56 56H38.9375C32.8969 56 28 51.1031 28 45.0625V56H0V42C0 34.2681 6.26806 28 14 28C21.7319 28 28 34.2681 28 42V28H56V56ZM17.0625 0C23.1031 0 28 4.89694 28 10.9375V0H56V14C56 21.7319 49.7319 28 42 28C34.2681 28 28 21.7319 28 14V28H0V0H17.0625Z"
-                  fill="url(#paint0_linear_14189_615)"
-                ></path>
-              </g>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_14189_615"
-                  x1="28"
-                  y1="0"
-                  x2="28"
-                  y2="56"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#545454"></stop>
-                  <stop offset="1" stop-color="#BABABA"></stop>
-                </linearGradient>
-                <clipPath id="clip0_14189_615">
-                  <rect width="56" height="56" fill="white"></rect>
-                </clipPath>
-              </defs>
-            </svg>
-            <h3>Innovative Tech</h3>
-            <p>
-              Cutting-edge technologies to drive efficiency and competitive
-              advantage.
-            </p>
-          </article>
+            <article class="partner__item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 56 56"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_14189_615)">
+                  <path
+                    d="M56 56H38.9375C32.8969 56 28 51.1031 28 45.0625V56H0V42C0 34.2681 6.26806 28 14 28C21.7319 28 28 34.2681 28 42V28H56V56ZM17.0625 0C23.1031 0 28 4.89694 28 10.9375V0H56V14C56 21.7319 49.7319 28 42 28C34.2681 28 28 21.7319 28 14V28H0V0H17.0625Z"
+                    fill="url(#paint0_linear_14189_615)"
+                  ></path>
+                </g>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14189_615"
+                    x1="28"
+                    y1="0"
+                    x2="28"
+                    y2="56"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#545454"></stop>
+                    <stop offset="1" stop-color="#BABABA"></stop>
+                  </linearGradient>
+                  <clipPath id="clip0_14189_615">
+                    <rect width="56" height="56" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3>Innovative Tech</h3>
+              <p>
+                Cutting-edge technologies to drive efficiency and competitive
+                advantage.
+              </p>
+            </article>
 
-          <article class="partner__item">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-            >
-              <g clip-path="url(#clip0_14189_618)">
-                <path
-                  d="M35 19.25L42.4375 7.4375L47.25 0H56V8.75L48.4531 20.4531L43.75 28H56V56H21V36.75L14.0538 48.125L8.75 56H0V47.25L7.4375 35.4375L12.25 28H0V0H35V19.25Z"
-                  fill="url(#paint0_linear_14189_618)"
-                ></path>
-              </g>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_14189_618"
-                  x1="28"
-                  y1="0"
-                  x2="28"
-                  y2="56"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stop-color="#545454"></stop>
-                  <stop offset="1" stop-color="#BABABA"></stop>
-                </linearGradient>
-                <clipPath id="clip0_14189_618">
-                  <rect width="56" height="56" fill="white"></rect>
-                </clipPath>
-              </defs>
-            </svg>
-            <h3>Expert Team</h3>
-            <p>
-              Seasoned professionals committed to delivering excellence in every
-              project.
-            </p>
-          </article>
+            <article class="partner__item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 56 56"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_14189_618)">
+                  <path
+                    d="M35 19.25L42.4375 7.4375L47.25 0H56V8.75L48.4531 20.4531L43.75 28H56V56H21V36.75L14.0538 48.125L8.75 56H0V47.25L7.4375 35.4375L12.25 28H0V0H35V19.25Z"
+                    fill="url(#paint0_linear_14189_618)"
+                  ></path>
+                </g>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14189_618"
+                    x1="28"
+                    y1="0"
+                    x2="28"
+                    y2="56"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#545454"></stop>
+                    <stop offset="1" stop-color="#BABABA"></stop>
+                  </linearGradient>
+                  <clipPath id="clip0_14189_618">
+                    <rect width="56" height="56" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+              <h3>Expert Team</h3>
+              <p>
+                Seasoned professionals committed to delivering excellence in
+                every project.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- Services -->
       <section class="services">
-        <h2 class="title">Our Services</h2>
+        <div class="container">
+          <h2 class="services__title">Our <i>Services</i></h2>
 
-        <div class="services__list">
-          <article class="service">
-            <span>#1</span>
-            <h3>Web App Development</h3>
-            <p>
-              Build blazing-fast web applications with clean architecture and
-              scalable infrastructure.
-            </p>
-          </article>
+          <div class="services__list">
+            <article class="service__column">
+              <span class="service__number">#1</span>
+              <h3 class="service__title">Web App Development</h3>
+              <p class="service__desc">
+                Build blazing-fast web applications with clean architecture and
+                scalable infrastructure.
+              </p>
+            </article>
 
-          <article class="service">
-            <span>#2</span>
-            <h3>Mobile App Development</h3>
-            <p>
-              Build blazing-fast web applications with clean architecture and
-              scalable infrastructure.
-            </p>
-          </article>
+            <article class="service__column">
+              <span class="service__number">#2</span>
+              <h3 class="service__title">Mobile App Development</h3>
+              <p class="service__desc">
+                Build blazing-fast web applications with clean architecture and
+                scalable infrastructure.
+              </p>
+            </article>
 
-          <article class="service">
-            <span>#3</span>
-            <h3>API & Backend Solutions</h3>
-            <p>
-              Build blazing-fast web applications with clean architecture and
-              scalable infrastructure.
-            </p>
-          </article>
+            <article class="service__column">
+              <span class="service__number">#3</span>
+              <h3 class="service__title">API & Backend Solutions</h3>
+              <p class="service__desc">
+                Build blazing-fast web applications with clean architecture and
+                scalable infrastructure.
+              </p>
+            </article>
 
-          <article class="service">
-            <span>#4</span>
-            <h3>Maintenance & Growth</h3>
-            <p>
-              Build blazing-fast web applications with clean architecture and
-              scalable infrastructure.
-            </p>
-          </article>
+            <article class="service__column">
+              <span class="service__number">#4</span>
+              <h3 class="service__title">Maintenance & Growth</h3>
+              <p class="service__desc">
+                Build blazing-fast web applications with clean architecture and
+                scalable infrastructure.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- Projects -->
       <section class="projects">
-        <h2 class="title">NexStudio Projects</h2>
+        <div class="container">
+          <h2 class="projects__title">NexStudio <i>Projects</i></h2>
 
-        <div class="projects__list">
-          <article class="project">
-            <h3 class="project__title">Finance Management System</h3>
+          <div class="projects__list">
+            <article class="project__card">
+              <h3 class="project__title">Finance Management System</h3>
 
-            <div class="project__meta">
-              <span>WEB APP</span>
-              <span>NOV 2026</span>
-            </div>
+              <div class="project__meta">
+                <span>WEB APP</span>
+                <span>MAY 2026</span>
+              </div>
 
-            <figure class="project__img">
-              <img
-                src="https://nexstudio.demos.tailgrids.com/images/project/project-1.jpg"
-                alt="project image"
-              />
-            </figure>
-          </article>
+              <figure class="project__img">
+                <img
+                  src="https://nexstudio.demos.tailgrids.com/images/project/project-1.jpg"
+                  alt="project image"
+                />
+              </figure>
+            </article>
 
-          <article class="project">
-            <h3 class="project__title">Finance Management System</h3>
+            <article class="project__card">
+              <h3 class="project__title">Finance Management System</h3>
 
-            <div class="project__meta">
-              <span>WEB APP</span>
-              <span>FEB 2026</span>
-            </div>
+              <div class="project__meta">
+                <span>WEB APP</span>
+                <span>MAR 2026</span>
+              </div>
 
-            <figure class="project__img">
-              <img
-                src="https://nexstudio.demos.tailgrids.com/images/project/project-1.jpg"
-                alt="project image"
-              />
-            </figure>
-          </article>
-        </div>
+              <figure class="project__img">
+                <img
+                  src="https://nexstudio.demos.tailgrids.com/images/project/project-2.jpg"
+                  alt="project image"
+                />
+              </figure>
+            </article>
+          </div>
 
-        <button class="btn btn--secondary">
-          EXPLORE ALL PROJECTS
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            class="transition-transform duration-300 group-hover:translate-x-1"
-          >
-            <path
-              d="M17.9941 5.25293C18.0771 5.253 18.1559 5.26997 18.2305 5.29492C18.2472 5.30045 18.2648 5.30381 18.2812 5.31055C18.3311 5.33127 18.3781 5.35722 18.4219 5.3877C18.4586 5.41309 18.4937 5.44192 18.5264 5.47461C18.6455 5.59379 18.7132 5.74352 18.7354 5.89844C18.7383 5.91968 18.7401 5.94112 18.7412 5.96289C18.7424 5.98346 18.7447 6.00382 18.7441 6.02441L18.7471 14.9941C18.747 15.4081 18.4103 15.744 17.9961 15.7441C17.5822 15.7438 17.2462 15.408 17.2461 14.9941L17.2441 7.81641L6.53027 18.5312C6.23737 18.824 5.76257 18.8241 5.46973 18.5312C5.1769 18.2384 5.17698 17.7636 5.46973 17.4707L16.1885 6.75098L8.99805 6.75C8.58403 6.74971 8.24816 6.41381 8.24805 6C8.24822 5.5859 8.58474 5.24985 8.99902 5.25L17.9941 5.25293Z"
-              fill="white"
-            ></path>
-          </svg>
-        </button>
-      </section>
-
-      <!-- Reviews -->
-      <section class="reviews">
-        <div class="reviews__col">
-          <h2 class="title">Our Client Reviews</h2>
-
-          <div class="reviews__btns">
-            <button class="review__btn">
+          <div class="projects__action">
+            <button class="button button--secondary">
+              EXPLORE ALL PROJECTS
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="none"
+                class="transition-transform duration-300 group-hover:translate-x-1"
               >
                 <path
-                  d="M12.7083 5L7.5 10.2083L12.7083 15.4167"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-
-            <button class="review__btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M7.29167 5L12.5 10.2083L7.29167 15.4167"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  d="M17.9941 5.25293C18.0771 5.253 18.1559 5.26997 18.2305 5.29492C18.2472 5.30045 18.2648 5.30381 18.2812 5.31055C18.3311 5.33127 18.3781 5.35722 18.4219 5.3877C18.4586 5.41309 18.4937 5.44192 18.5264 5.47461C18.6455 5.59379 18.7132 5.74352 18.7354 5.89844C18.7383 5.91968 18.7401 5.94112 18.7412 5.96289C18.7424 5.98346 18.7447 6.00382 18.7441 6.02441L18.7471 14.9941C18.747 15.4081 18.4103 15.744 17.9961 15.7441C17.5822 15.7438 17.2462 15.408 17.2461 14.9941L17.2441 7.81641L6.53027 18.5312C6.23737 18.824 5.76257 18.8241 5.46973 18.5312C5.1769 18.2384 5.17698 17.7636 5.46973 17.4707L16.1885 6.75098L8.99805 6.75C8.58403 6.74971 8.24816 6.41381 8.24805 6C8.24822 5.5859 8.58474 5.24985 8.99902 5.25L17.9941 5.25293Z"
+                  fill="black"
                 ></path>
               </svg>
             </button>
           </div>
         </div>
+      </section>
 
-        <div class="reviews__col">
-          <article class="review">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
-              alt="client logo"
-            />
+      <!-- Reviews -->
+      <section class="reviews">
+        <div class="reviews__inner">
+          <div class="reviews__heading">
+            <h2 class="reviews__title">Our Client <i>Reviews</i></h2>
 
-            <blockquote>
-              <p>
-                DigitX transformed our outdated website into a modern,
-                responsive platform. Their attention to detail and ability to
-                understand our vision made the entire process smooth and
-                hassle-free.
-              </p>
-            </blockquote>
+            <div class="reviews__action">
+              <button class="review__btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M12.7083 5L7.5 10.2083L12.7083 15.4167"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
 
-            <footer class="review__author">
-              <h4>Michael Johnson</h4>
-              <p>Marketing Manager at GlobalTech Solutions.</p>
-            </footer>
-          </article>
+              <button class="review__btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M7.29167 5L12.5 10.2083L7.29167 15.4167"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
 
-          <article class="review">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
-              alt="client logo"
-            />
+          <div class="reviews__content">
+            <article class="review__card">
+              <img
+                src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+                alt="client logo"
+              />
 
-            <blockquote>
-              <p>
-                DigitX transformed our outdated website into a modern,
-                responsive platform. Their attention to detail and ability to
-                understand our vision made the entire process smooth and
-                hassle-free.
-              </p>
-            </blockquote>
+              <blockquote>
+                <p>
+                  DigitX transformed our outdated website into a modern,
+                  responsive platform. Their attention to detail and ability to
+                  understand our vision made the entire process smooth and
+                  hassle-free.
+                </p>
+              </blockquote>
 
-            <footer class="review__author">
-              <h4>Michael Johnson</h4>
-              <p>Marketing Manager at GlobalTech Solutions.</p>
-            </footer>
-          </article>
+              <footer class="review__author">
+                <h4>Michael Johnson</h4>
+                <p>Marketing Manager at GlobalTech Solutions.</p>
+              </footer>
+            </article>
 
-          <article class="review">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
-              alt="client logo"
-            />
+            <article class="review__card">
+              <img
+                src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+                alt="client logo"
+              />
 
-            <blockquote>
-              <p>
-                DigitX transformed our outdated website into a modern,
-                responsive platform. Their attention to detail and ability to
-                understand our vision made the entire process smooth and
-                hassle-free.
-              </p>
-            </blockquote>
+              <blockquote>
+                <p>
+                  DigitX transformed our outdated website into a modern,
+                  responsive platform. Their attention to detail and ability to
+                  understand our vision made the entire process smooth and
+                  hassle-free.
+                </p>
+              </blockquote>
 
-            <footer class="review__author">
-              <h4>Michael Johnson</h4>
-              <p>Marketing Manager at GlobalTech Solutions.</p>
-            </footer>
-          </article>
+              <footer class="review__author">
+                <h4>Michael Johnson</h4>
+                <p>Marketing Manager at GlobalTech Solutions.</p>
+              </footer>
+            </article>
 
-          <article class="review">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
-              alt="client logo"
-            />
+            <article class="review__card">
+              <img
+                src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+                alt="client logo"
+              />
 
-            <blockquote>
-              <p>
-                DigitX transformed our outdated website into a modern,
-                responsive platform. Their attention to detail and ability to
-                understand our vision made the entire process smooth and
-                hassle-free.
-              </p>
-            </blockquote>
+              <blockquote>
+                <p>
+                  DigitX transformed our outdated website into a modern,
+                  responsive platform. Their attention to detail and ability to
+                  understand our vision made the entire process smooth and
+                  hassle-free.
+                </p>
+              </blockquote>
 
-            <footer class="review__author">
-              <h4>Michael Johnson</h4>
-              <p>Marketing Manager at GlobalTech Solutions.</p>
-            </footer>
-          </article>
+              <footer class="review__author">
+                <h4>Michael Johnson</h4>
+                <p>Marketing Manager at GlobalTech Solutions.</p>
+              </footer>
+            </article>
 
-          <article class="review">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
-              alt="client logo"
-            />
+            <article class="review__card">
+              <img
+                src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+                alt="client logo"
+              />
 
-            <blockquote>
-              <p>
-                DigitX transformed our outdated website into a modern,
-                responsive platform. Their attention to detail and ability to
-                understand our vision made the entire process smooth and
-                hassle-free.
-              </p>
-            </blockquote>
+              <blockquote>
+                <p>
+                  DigitX transformed our outdated website into a modern,
+                  responsive platform. Their attention to detail and ability to
+                  understand our vision made the entire process smooth and
+                  hassle-free.
+                </p>
+              </blockquote>
 
-            <footer class="review__author">
-              <h4>Michael Johnson</h4>
-              <p>Marketing Manager at GlobalTech Solutions.</p>
-            </footer>
-          </article>
+              <footer class="review__author">
+                <h4>Michael Johnson</h4>
+                <p>Marketing Manager at GlobalTech Solutions.</p>
+              </footer>
+            </article>
+
+            <article class="review__card">
+              <img
+                src="https://nexstudio.demos.tailgrids.com/images/clients/logo-1.svg"
+                alt="client logo"
+              />
+
+              <blockquote>
+                <p>
+                  DigitX transformed our outdated website into a modern,
+                  responsive platform. Their attention to detail and ability to
+                  understand our vision made the entire process smooth and
+                  hassle-free.
+                </p>
+              </blockquote>
+
+              <footer class="review__author">
+                <h4>Michael Johnson</h4>
+                <p>Marketing Manager at GlobalTech Solutions.</p>
+              </footer>
+            </article>
+          </div>
         </div>
       </section>
 
       <!-- Blogs -->
       <section class="blogs">
-        <h2 class="title">NexStudio Blogs</h2>
+        <div class="container">
+          <h2 class="blogs__title">NexStudio <i>Blogs</i></h2>
 
-        <div class="blogs__list">
-          <article class="blog">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/blog/thumb-2.jpg"
-              alt="blog image"
-            />
+          <div class="blogs__list">
+            <article class="blog__card">
+              <figure class="blog__image">
+                <img
+                  src="https://nexstudio.demos.tailgrids.com/images/blog/thumb-2.jpg"
+                  alt="blog image"
+                />
+              </figure>
 
-            <div class="blog__meta">
-              <span>APP DESIGN</span>
-              <time datetime="2026-01">JAN 2026</time>
-            </div>
+              <div class="blog__meta">
+                <span>APP DESIGN</span>
+                <time datetime="2026-01">JAN 2026</time>
+              </div>
 
-            <h3>
-              <a href="#">
-                The Future of Web UX: Trends That Will Shape 2027
-              </a>
-            </h3>
-          </article>
+              <h3 class="blog__link">
+                <a href="#">
+                  The Future of Web UX: Trends That Will Shape 2027
+                </a>
+              </h3>
+            </article>
 
-          <article class="blog">
-            <img
-              src="https://nexstudio.demos.tailgrids.com/images/blog/thumb-1.jpg"
-              alt="blog image"
-            />
+            <article class="blog__card">
+              <figure class="blog__image">
+                <img
+                  src="https://nexstudio.demos.tailgrids.com/images/blog/thumb-1.jpg"
+                  alt="blog image"
+                />
+              </figure>
 
-            <div class="blog__meta">
-              <span>APP DESIGN</span>
-              <time datetime="2026-09">SEP 2026</time>
-            </div>
+              <div class="blog__meta">
+                <span>APP DESIGN</span>
+                <time datetime="2026-09">SEP 2026</time>
+              </div>
 
-            <h3>
-              <a href="#">
-                The Future of Web UX: Trends That Will Shape 2027
-              </a>
-            </h3>
-          </article>
+              <h3 class="blog__link">
+                <a href="#">
+                  The Future of Web UX: Trends That Will Shape 2027
+                </a>
+              </h3>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -617,310 +668,316 @@
     <footer class="footer">
       <!-- CTA -->
       <div class="footer__cta">
-        <h2 class="title">
-          Ready to build <br />
-          your next big idea?
-        </h2>
+        <div class="container cta__inner">
+          <h2 class="cta__title">
+            Ready to build <br />
+            your next <i>big idea?</i>
+          </h2>
 
-        <a href="#" class="btn btn--secondary">CONTACT US</a>
+          <a href="#" class="button button--secondary">CONTACT US</a>
+        </div>
       </div>
 
-      <div class="footer__content">
-        <img
-          src="https://nexstudio.demos.tailgrids.com/images/layout/logo-white.svg"
-          alt="logo"
-        />
+      <div class="footer__menu">
+        <div class="container">
+          <div class="footer__content">
+            <img
+              src="https://nexstudio.demos.tailgrids.com/images/layout/logo-white.svg"
+              alt="logo"
+            />
 
-        <nav class="footer__nav">
-          <!-- 1st col -->
-          <section class="footer__group">
-            <h2>Use cases</h2>
+            <nav class="footer__nav">
+              <!-- 1st col -->
+              <div class="footer__group">
+                <h2>Use cases</h2>
 
-            <ul class="footer__links">
-              <li>
-                <a href="#">Product Development</a>
-              </li>
-              <li>
-                <a href="#">Collaborate With Team</a>
-              </li>
-              <li>
-                <a href="#">SaaS Dashboards</a>
-              </li>
-              <li>
-                <a href="#">Web Applications</a>
-              </li>
-              <li>
-                <a href="#">AI-Powered Solutions</a>
-              </li>
-            </ul>
-          </section>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">Product Development</a>
+                  </li>
+                  <li>
+                    <a href="#">Collaborate With Team</a>
+                  </li>
+                  <li>
+                    <a href="#">SaaS Dashboards</a>
+                  </li>
+                  <li>
+                    <a href="#">Web Applications</a>
+                  </li>
+                  <li>
+                    <a href="#">AI-Powered Solutions</a>
+                  </li>
+                </ul>
+              </div>
 
-          <!-- 2nd col -->
-          <section class="footer__group">
-            <h2>Services</h2>
+              <!-- 2nd col -->
+              <div class="footer__group">
+                <h2>Services</h2>
 
-            <ul class="footer__links">
-              <li>
-                <a href="#">Software Development</a>
-              </li>
-              <li>
-                <a href="#">Web Development</a>
-              </li>
-              <li>
-                <a href="#">App Development</a>
-              </li>
-              <li>
-                <a href="#">UI/UX Design</a>
-              </li>
-              <li>
-                <a href="#">Product Strategy</a>
-              </li>
-              <li>
-                <a href="#">AI/Automation</a>
-              </li>
-            </ul>
-          </section>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">Software Development</a>
+                  </li>
+                  <li>
+                    <a href="#">Web Development</a>
+                  </li>
+                  <li>
+                    <a href="#">App Development</a>
+                  </li>
+                  <li>
+                    <a href="#">UI/UX Design</a>
+                  </li>
+                  <li>
+                    <a href="#">Product Strategy</a>
+                  </li>
+                  <li>
+                    <a href="#">AI/Automation</a>
+                  </li>
+                </ul>
+              </div>
 
-          <!-- 3rd col -->
-          <section class="footer__group">
-            <h2>Resources</h2>
+              <!-- 3rd col -->
+              <div class="footer__group">
+                <h2>Resources</h2>
 
-            <ul class="footer__links">
-              <li>
-                <a href="#">Read our blog</a>
-              </li>
-              <li>
-                <a href="#">Partners</a>
-              </li>
-              <li>
-                <a href="#">News</a>
-              </li>
-              <li>
-                <a href="#">Documnetation</a>
-              </li>
-              <li>
-                <a href="#">Status</a>
-              </li>
-            </ul>
-          </section>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">Read our blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Partners</a>
+                  </li>
+                  <li>
+                    <a href="#">News</a>
+                  </li>
+                  <li>
+                    <a href="#">Documnetation</a>
+                  </li>
+                  <li>
+                    <a href="#">Status</a>
+                  </li>
+                </ul>
+              </div>
 
-          <!-- 4th col -->
-          <section class="footer__group">
-            <h2>Contact</h2>
+              <!-- 4th col -->
+              <div class="footer__group">
+                <h2>Contact</h2>
 
-            <ul class="footer__links">
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Facebook</a>
-              </li>
-              <li>
-                <a href="#">Twitter</a>
-              </li>
-              <li>
-                <a href="#">Linkedin</a>
-              </li>
-              <li>
-                <a href="#">Youtube</a>
-              </li>
-            </ul>
-          </section>
-        </nav>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Facebook</a>
+                  </li>
+                  <li>
+                    <a href="#">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="#">Linkedin</a>
+                  </li>
+                  <li>
+                    <a href="#">Youtube</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
 
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="1281"
-            height="178"
-            viewBox="0 0 1281 178"
-            fill="none"
-          >
-            <mask
-              id="a"
-              maskUnits="userSpaceOnUse"
-              x="-0.601562"
-              y="-0.601562"
-              width="1282"
-              height="179"
-              fill="#000"
-            >
-              <path
-                fill="#fff"
-                d="M-0.601562 -0.601562H1281.398438V178.398438H-0.601562z"
-              ></path>
-              <path
-                d="M139.034 2.747V174.51h-23.819L27.907 48.54h-1.593v125.97H.398V2.747h23.987l87.391 126.139h1.594V2.746h25.664zM227.394 177.11c-12.692 0-23.623-2.711-32.793-8.135-9.114-5.479-16.159-13.167-21.135-23.064-4.92-9.952-7.38-21.61-7.38-34.973 0-13.196 2.46-24.826 7.38-34.89 4.976-10.064 11.91-17.92 20.8-23.567 8.946-5.647 19.401-8.47 31.367-8.47a63.128 63.128 0 0121.135 3.606c6.821 2.404 12.943 6.178 18.367 11.322 5.423 5.144 9.701 11.825 12.832 20.045 3.131 8.163 4.697 18.087 4.697 29.773v8.89H180.26V98.861h77.83c0-6.598-1.342-12.441-4.026-17.529-2.684-5.144-6.458-9.198-11.322-12.161-4.809-2.963-10.456-4.445-16.942-4.445-7.045 0-13.195 1.733-18.451 5.2-5.2 3.41-9.225 7.883-12.077 13.419-2.796 5.48-4.193 11.434-4.193 17.864v14.677c0 8.611 1.509 15.935 4.529 21.974 3.075 6.038 7.352 10.651 12.832 13.838 5.479 3.131 11.881 4.697 19.205 4.697 4.753 0 9.086-.671 13-2.013 3.914-1.398 7.297-3.467 10.148-6.206 2.852-2.74 5.032-6.123 6.542-10.149l23.735 4.278c-1.901 6.989-5.312 13.111-10.232 18.367-4.864 5.2-10.987 9.254-18.367 12.161-7.325 2.852-15.684 4.277-25.077 4.277zM324.33 45.688l28.431 50.153 28.683-50.153h27.425l-40.173 64.411 40.509 64.411H381.78l-29.019-48.14-28.935 48.14h-27.509l40.09-64.411-39.586-64.411h27.509zM539.94 47.03c0-9.226-3.047-16.215-9.142-20.968-6.094-4.808-14.341-7.212-24.741-7.212-7.604 0-14.454 1.23-20.548 3.69-6.095 2.46-11.071 5.843-14.929 10.148-3.858 4.305-6.234 9.198-7.129 14.677-.726 4.585-.251 8.527 1.426 11.826 1.678 3.242 4.054 5.954 7.129 8.135a50.75 50.75 0 0010.064 5.284c3.579 1.341 6.878 2.432 9.897 3.27l16.774 4.697c4.193 1.174 8.862 2.796 14.006 4.865 5.144 2.068 9.952 4.892 14.425 8.47 4.473 3.523 7.884 8.052 10.232 13.587 2.404 5.535 2.936 12.329 1.594 20.38-1.566 9.282-5.396 17.669-11.49 25.161-6.039 7.492-14.034 13.447-23.987 17.864-9.896 4.417-21.442 6.626-34.638 6.626-12.301 0-22.644-1.985-31.031-5.955-8.331-3.97-14.482-9.505-18.451-16.606-3.914-7.101-5.424-15.348-4.529-24.741h21.47c-.559 6.485.727 11.853 3.858 16.102 3.131 4.194 7.492 7.325 13.084 9.394 5.591 2.013 11.797 3.019 18.619 3.019 7.939 0 15.264-1.286 21.973-3.858 6.766-2.628 12.357-6.262 16.774-10.903 4.473-4.697 7.213-10.176 8.219-16.438 1.007-5.703.224-10.344-2.348-13.922-2.572-3.579-6.29-6.486-11.155-8.723-4.864-2.236-10.204-4.193-16.019-5.87l-20.128-6.04c-12.748-3.857-22.449-9.365-29.103-16.521-6.597-7.157-8.974-16.523-7.129-28.097 1.678-9.617 5.731-18.003 12.161-25.16 6.43-7.213 14.398-12.804 23.903-16.774 9.505-4.026 19.737-6.039 30.696-6.039 11.071 0 20.548 2.013 28.432 6.039 7.883 3.97 13.754 9.477 17.612 16.522 3.858 6.99 5.284 15.013 4.277 24.07H539.94zM588.63 21.198l3.019-18.451h128.823l-3.019 18.45h-54.012L637.945 174.51h-20.8l25.496-153.312H588.63zM862.34 2.747h20.8l-18.787 113.726c-1.957 11.742-6.458 22.225-13.503 31.451-7.045 9.17-16.019 16.41-26.922 21.722-10.903 5.256-23.092 7.884-36.566 7.884-13.475 0-24.77-2.628-33.884-7.884-9.113-5.312-15.655-12.552-19.625-21.722-3.97-9.226-4.976-19.709-3.019-31.451L749.62 2.747h20.8l-18.619 112.049c-1.342 8.387-.699 15.851 1.929 22.393 2.628 6.486 7.045 11.602 13.251 15.348 6.263 3.69 14.174 5.535 23.735 5.535s18.088-1.845 25.58-5.535c7.493-3.746 13.587-8.862 18.284-15.348 4.752-6.542 7.8-14.006 9.141-22.393L862.34 2.746zM946.884 174.51h-53.676L921.724 2.747h54.682c16.662 0 30.384 3.494 41.184 10.483 10.84 6.99 18.39 16.97 22.64 29.942 4.31 12.971 4.95 28.46 1.93 46.463-2.91 17.668-8.56 32.849-16.94 45.541-8.33 12.636-19.12 22.365-32.375 29.186-13.196 6.766-28.516 10.148-45.961 10.148zm-29.773-18.451h30.444c14.202 0 26.447-2.795 36.735-8.387 10.344-5.591 18.67-13.558 24.99-23.902 6.38-10.344 10.74-22.617 13.09-36.819 2.34-13.642 2.12-25.356-.67-35.14-2.74-9.842-8.14-17.39-16.19-22.645-7.997-5.312-18.704-7.968-32.123-7.968H939.42l-22.309 134.861zM1109.32 2.747l-28.51 171.763h-20.8l28.51-171.763h20.8zM1278.57 89.97c-3.02 17.893-8.8 33.352-17.36 46.38-8.55 12.972-19.01 22.98-31.36 30.025-12.36 6.989-25.75 10.484-40.18 10.484-14.87 0-27.53-3.635-37.99-10.903-10.4-7.325-17.84-17.669-22.31-31.032-4.42-13.419-5.12-29.298-2.1-47.637 3.02-17.892 8.81-33.324 17.36-46.296 8.56-13.028 19.04-23.036 31.46-30.025C1188.5 3.92 1201.97.398 1216.51.398c14.76 0 27.31 3.663 37.66 10.987 10.4 7.269 17.81 17.613 22.22 31.032 4.48 13.363 5.2 29.214 2.18 47.553zm-19.79-2.683c2.46-14.65 2.1-26.978-1.09-36.987-3.19-10.008-8.47-17.584-15.85-22.728-7.38-5.144-16.16-7.716-26.34-7.716-10.62 0-20.68 2.712-30.19 8.135-9.5 5.368-17.64 13.28-24.4 23.735-6.77 10.4-11.38 23.148-13.84 38.245-2.46 14.649-2.1 26.977 1.09 36.986 3.18 10.008 8.47 17.584 15.85 22.728 7.38 5.144 16.16 7.716 26.33 7.716 10.63 0 20.69-2.684 30.2-8.051 9.5-5.424 17.64-13.335 24.4-23.735 6.77-10.456 11.38-23.232 13.84-38.328z"
-              ></path>
-            </mask>
-            <path
-              d="M139.034 2.747V174.51h-23.819L27.907 48.54h-1.593v125.97H.398V2.747h23.987l87.391 126.139h1.594V2.746h25.664z"
-              stroke="url(#paint0_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M227.394 177.11c-12.692 0-23.623-2.711-32.793-8.135-9.114-5.479-16.159-13.167-21.135-23.064-4.92-9.952-7.38-21.61-7.38-34.973 0-13.196 2.46-24.826 7.38-34.89 4.976-10.064 11.91-17.92 20.8-23.567 8.946-5.647 19.401-8.47 31.367-8.47a63.128 63.128 0 0121.135 3.606c6.821 2.404 12.943 6.178 18.367 11.322 5.423 5.144 9.701 11.825 12.832 20.045 3.131 8.163 4.697 18.087 4.697 29.773v8.89H180.26V98.861h77.83c0-6.598-1.342-12.441-4.026-17.529-2.684-5.144-6.458-9.198-11.322-12.161-4.809-2.963-10.456-4.445-16.942-4.445-7.045 0-13.195 1.733-18.451 5.2-5.2 3.41-9.225 7.883-12.077 13.419-2.796 5.48-4.193 11.434-4.193 17.864v14.677c0 8.611 1.509 15.935 4.529 21.974 3.075 6.038 7.352 10.651 12.832 13.838 5.479 3.131 11.881 4.697 19.205 4.697 4.753 0 9.086-.671 13-2.013 3.914-1.398 7.297-3.467 10.148-6.206 2.852-2.74 5.032-6.123 6.542-10.149l23.735 4.278c-1.901 6.989-5.312 13.111-10.232 18.367-4.864 5.2-10.987 9.254-18.367 12.161-7.325 2.852-15.684 4.277-25.077 4.277z"
-              stroke="url(#paint1_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M324.33 45.688l28.431 50.153 28.683-50.153h27.425l-40.173 64.411 40.509 64.411H381.78l-29.019-48.14-28.935 48.14h-27.509l40.09-64.411-39.586-64.411h27.509z"
-              stroke="url(#paint2_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M539.94 47.03c0-9.226-3.047-16.215-9.142-20.968-6.094-4.808-14.341-7.212-24.741-7.212-7.604 0-14.454 1.23-20.548 3.69-6.095 2.46-11.071 5.843-14.929 10.148-3.858 4.305-6.234 9.198-7.129 14.677-.726 4.585-.251 8.527 1.426 11.826 1.678 3.242 4.054 5.954 7.129 8.135a50.75 50.75 0 0010.064 5.284c3.579 1.341 6.878 2.432 9.897 3.27l16.774 4.697c4.193 1.174 8.862 2.796 14.006 4.865 5.144 2.068 9.952 4.892 14.425 8.47 4.473 3.523 7.884 8.052 10.232 13.587 2.404 5.535 2.936 12.329 1.594 20.38-1.566 9.282-5.396 17.669-11.49 25.161-6.039 7.492-14.034 13.447-23.987 17.864-9.896 4.417-21.442 6.626-34.638 6.626-12.301 0-22.644-1.985-31.031-5.955-8.331-3.97-14.482-9.505-18.451-16.606-3.914-7.101-5.424-15.348-4.529-24.741h21.47c-.559 6.485.727 11.853 3.858 16.102 3.131 4.194 7.492 7.325 13.084 9.394 5.591 2.013 11.797 3.019 18.619 3.019 7.939 0 15.264-1.286 21.973-3.858 6.766-2.628 12.357-6.262 16.774-10.903 4.473-4.697 7.213-10.176 8.219-16.438 1.007-5.703.224-10.344-2.348-13.922-2.572-3.579-6.29-6.486-11.155-8.723-4.864-2.236-10.204-4.193-16.019-5.87l-20.128-6.04c-12.748-3.857-22.449-9.365-29.103-16.521-6.597-7.157-8.974-16.523-7.129-28.097 1.678-9.617 5.731-18.003 12.161-25.16 6.43-7.213 14.398-12.804 23.903-16.774 9.505-4.026 19.737-6.039 30.696-6.039 11.071 0 20.548 2.013 28.432 6.039 7.883 3.97 13.754 9.477 17.612 16.522 3.858 6.99 5.284 15.013 4.277 24.07H539.94z"
-              stroke="url(#paint3_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M588.63 21.198l3.019-18.451h128.823l-3.019 18.45h-54.012L637.945 174.51h-20.8l25.496-153.312H588.63z"
-              stroke="url(#paint4_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M862.34 2.747h20.8l-18.787 113.726c-1.957 11.742-6.458 22.225-13.503 31.451-7.045 9.17-16.019 16.41-26.922 21.722-10.903 5.256-23.092 7.884-36.566 7.884-13.475 0-24.77-2.628-33.884-7.884-9.113-5.312-15.655-12.552-19.625-21.722-3.97-9.226-4.976-19.709-3.019-31.451L749.62 2.747h20.8l-18.619 112.049c-1.342 8.387-.699 15.851 1.929 22.393 2.628 6.486 7.045 11.602 13.251 15.348 6.263 3.69 14.174 5.535 23.735 5.535s18.088-1.845 25.58-5.535c7.493-3.746 13.587-8.862 18.284-15.348 4.752-6.542 7.8-14.006 9.141-22.393L862.34 2.746z"
-              stroke="url(#paint5_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M946.884 174.51h-53.676L921.724 2.747h54.682c16.662 0 30.384 3.494 41.184 10.483 10.84 6.99 18.39 16.97 22.64 29.942 4.31 12.971 4.95 28.46 1.93 46.463-2.91 17.668-8.56 32.849-16.94 45.541-8.33 12.636-19.12 22.365-32.375 29.186-13.196 6.766-28.516 10.148-45.961 10.148zm-29.773-18.451h30.444c14.202 0 26.447-2.795 36.735-8.387 10.344-5.591 18.67-13.558 24.99-23.902 6.38-10.344 10.74-22.617 13.09-36.819 2.34-13.642 2.12-25.356-.67-35.14-2.74-9.842-8.14-17.39-16.19-22.645-7.997-5.312-18.704-7.968-32.123-7.968H939.42l-22.309 134.861z"
-              stroke="url(#paint6_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M1109.32 2.747l-28.51 171.763h-20.8l28.51-171.763h20.8z"
-              stroke="url(#paint7_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <path
-              d="M1278.57 89.97c-3.02 17.893-8.8 33.352-17.36 46.38-8.55 12.972-19.01 22.98-31.36 30.025-12.36 6.989-25.75 10.484-40.18 10.484-14.87 0-27.53-3.635-37.99-10.903-10.4-7.325-17.84-17.669-22.31-31.032-4.42-13.419-5.12-29.298-2.1-47.637 3.02-17.892 8.81-33.324 17.36-46.296 8.56-13.028 19.04-23.036 31.46-30.025C1188.5 3.92 1201.97.398 1216.51.398c14.76 0 27.31 3.663 37.66 10.987 10.4 7.269 17.81 17.613 22.22 31.032 4.48 13.363 5.2 29.214 2.18 47.553zm-19.79-2.683c2.46-14.65 2.1-26.978-1.09-36.987-3.19-10.008-8.47-17.584-15.85-22.728-7.38-5.144-16.16-7.716-26.34-7.716-10.62 0-20.68 2.712-30.19 8.135-9.5 5.368-17.64 13.28-24.4 23.735-6.77 10.4-11.38 23.148-13.84 38.245-2.46 14.649-2.1 26.977 1.09 36.986 3.18 10.008 8.47 17.584 15.85 22.728 7.38 5.144 16.16 7.716 26.33 7.716 10.63 0 20.69-2.684 30.2-8.051 9.5-5.424 17.64-13.335 24.4-23.735 6.77-10.456 11.38-23.232 13.84-38.328z"
-              stroke="url(#paint8_linear_14176_476)"
-              stroke-width="0.8"
-              mask="url(#a)"
-            ></path>
-            <defs>
-              <linearGradient
-                id="paint0_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
+            <div class="footer__logo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1281"
+                height="178"
+                viewBox="0 0 1281 178"
+                fill="none"
               >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint6_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint7_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-              <linearGradient
-                id="paint8_linear_14176_476"
-                x1="640.398"
-                y1="0.398438"
-                x2="640.398"
-                y2="177.53"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#fff"></stop>
-                <stop offset="1" stop-color="#070707"></stop>
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+                <mask
+                  id="a"
+                  maskUnits="userSpaceOnUse"
+                  x="-0.601562"
+                  y="-0.601562"
+                  width="1282"
+                  height="179"
+                  fill="#000"
+                >
+                  <path
+                    fill="#fff"
+                    d="M-0.601562 -0.601562H1281.398438V178.398438H-0.601562z"
+                  ></path>
+                  <path
+                    d="M139.034 2.747V174.51h-23.819L27.907 48.54h-1.593v125.97H.398V2.747h23.987l87.391 126.139h1.594V2.746h25.664zM227.394 177.11c-12.692 0-23.623-2.711-32.793-8.135-9.114-5.479-16.159-13.167-21.135-23.064-4.92-9.952-7.38-21.61-7.38-34.973 0-13.196 2.46-24.826 7.38-34.89 4.976-10.064 11.91-17.92 20.8-23.567 8.946-5.647 19.401-8.47 31.367-8.47a63.128 63.128 0 0121.135 3.606c6.821 2.404 12.943 6.178 18.367 11.322 5.423 5.144 9.701 11.825 12.832 20.045 3.131 8.163 4.697 18.087 4.697 29.773v8.89H180.26V98.861h77.83c0-6.598-1.342-12.441-4.026-17.529-2.684-5.144-6.458-9.198-11.322-12.161-4.809-2.963-10.456-4.445-16.942-4.445-7.045 0-13.195 1.733-18.451 5.2-5.2 3.41-9.225 7.883-12.077 13.419-2.796 5.48-4.193 11.434-4.193 17.864v14.677c0 8.611 1.509 15.935 4.529 21.974 3.075 6.038 7.352 10.651 12.832 13.838 5.479 3.131 11.881 4.697 19.205 4.697 4.753 0 9.086-.671 13-2.013 3.914-1.398 7.297-3.467 10.148-6.206 2.852-2.74 5.032-6.123 6.542-10.149l23.735 4.278c-1.901 6.989-5.312 13.111-10.232 18.367-4.864 5.2-10.987 9.254-18.367 12.161-7.325 2.852-15.684 4.277-25.077 4.277zM324.33 45.688l28.431 50.153 28.683-50.153h27.425l-40.173 64.411 40.509 64.411H381.78l-29.019-48.14-28.935 48.14h-27.509l40.09-64.411-39.586-64.411h27.509zM539.94 47.03c0-9.226-3.047-16.215-9.142-20.968-6.094-4.808-14.341-7.212-24.741-7.212-7.604 0-14.454 1.23-20.548 3.69-6.095 2.46-11.071 5.843-14.929 10.148-3.858 4.305-6.234 9.198-7.129 14.677-.726 4.585-.251 8.527 1.426 11.826 1.678 3.242 4.054 5.954 7.129 8.135a50.75 50.75 0 0010.064 5.284c3.579 1.341 6.878 2.432 9.897 3.27l16.774 4.697c4.193 1.174 8.862 2.796 14.006 4.865 5.144 2.068 9.952 4.892 14.425 8.47 4.473 3.523 7.884 8.052 10.232 13.587 2.404 5.535 2.936 12.329 1.594 20.38-1.566 9.282-5.396 17.669-11.49 25.161-6.039 7.492-14.034 13.447-23.987 17.864-9.896 4.417-21.442 6.626-34.638 6.626-12.301 0-22.644-1.985-31.031-5.955-8.331-3.97-14.482-9.505-18.451-16.606-3.914-7.101-5.424-15.348-4.529-24.741h21.47c-.559 6.485.727 11.853 3.858 16.102 3.131 4.194 7.492 7.325 13.084 9.394 5.591 2.013 11.797 3.019 18.619 3.019 7.939 0 15.264-1.286 21.973-3.858 6.766-2.628 12.357-6.262 16.774-10.903 4.473-4.697 7.213-10.176 8.219-16.438 1.007-5.703.224-10.344-2.348-13.922-2.572-3.579-6.29-6.486-11.155-8.723-4.864-2.236-10.204-4.193-16.019-5.87l-20.128-6.04c-12.748-3.857-22.449-9.365-29.103-16.521-6.597-7.157-8.974-16.523-7.129-28.097 1.678-9.617 5.731-18.003 12.161-25.16 6.43-7.213 14.398-12.804 23.903-16.774 9.505-4.026 19.737-6.039 30.696-6.039 11.071 0 20.548 2.013 28.432 6.039 7.883 3.97 13.754 9.477 17.612 16.522 3.858 6.99 5.284 15.013 4.277 24.07H539.94zM588.63 21.198l3.019-18.451h128.823l-3.019 18.45h-54.012L637.945 174.51h-20.8l25.496-153.312H588.63zM862.34 2.747h20.8l-18.787 113.726c-1.957 11.742-6.458 22.225-13.503 31.451-7.045 9.17-16.019 16.41-26.922 21.722-10.903 5.256-23.092 7.884-36.566 7.884-13.475 0-24.77-2.628-33.884-7.884-9.113-5.312-15.655-12.552-19.625-21.722-3.97-9.226-4.976-19.709-3.019-31.451L749.62 2.747h20.8l-18.619 112.049c-1.342 8.387-.699 15.851 1.929 22.393 2.628 6.486 7.045 11.602 13.251 15.348 6.263 3.69 14.174 5.535 23.735 5.535s18.088-1.845 25.58-5.535c7.493-3.746 13.587-8.862 18.284-15.348 4.752-6.542 7.8-14.006 9.141-22.393L862.34 2.746zM946.884 174.51h-53.676L921.724 2.747h54.682c16.662 0 30.384 3.494 41.184 10.483 10.84 6.99 18.39 16.97 22.64 29.942 4.31 12.971 4.95 28.46 1.93 46.463-2.91 17.668-8.56 32.849-16.94 45.541-8.33 12.636-19.12 22.365-32.375 29.186-13.196 6.766-28.516 10.148-45.961 10.148zm-29.773-18.451h30.444c14.202 0 26.447-2.795 36.735-8.387 10.344-5.591 18.67-13.558 24.99-23.902 6.38-10.344 10.74-22.617 13.09-36.819 2.34-13.642 2.12-25.356-.67-35.14-2.74-9.842-8.14-17.39-16.19-22.645-7.997-5.312-18.704-7.968-32.123-7.968H939.42l-22.309 134.861zM1109.32 2.747l-28.51 171.763h-20.8l28.51-171.763h20.8zM1278.57 89.97c-3.02 17.893-8.8 33.352-17.36 46.38-8.55 12.972-19.01 22.98-31.36 30.025-12.36 6.989-25.75 10.484-40.18 10.484-14.87 0-27.53-3.635-37.99-10.903-10.4-7.325-17.84-17.669-22.31-31.032-4.42-13.419-5.12-29.298-2.1-47.637 3.02-17.892 8.81-33.324 17.36-46.296 8.56-13.028 19.04-23.036 31.46-30.025C1188.5 3.92 1201.97.398 1216.51.398c14.76 0 27.31 3.663 37.66 10.987 10.4 7.269 17.81 17.613 22.22 31.032 4.48 13.363 5.2 29.214 2.18 47.553zm-19.79-2.683c2.46-14.65 2.1-26.978-1.09-36.987-3.19-10.008-8.47-17.584-15.85-22.728-7.38-5.144-16.16-7.716-26.34-7.716-10.62 0-20.68 2.712-30.19 8.135-9.5 5.368-17.64 13.28-24.4 23.735-6.77 10.4-11.38 23.148-13.84 38.245-2.46 14.649-2.1 26.977 1.09 36.986 3.18 10.008 8.47 17.584 15.85 22.728 7.38 5.144 16.16 7.716 26.33 7.716 10.63 0 20.69-2.684 30.2-8.051 9.5-5.424 17.64-13.335 24.4-23.735 6.77-10.456 11.38-23.232 13.84-38.328z"
+                  ></path>
+                </mask>
+                <path
+                  d="M139.034 2.747V174.51h-23.819L27.907 48.54h-1.593v125.97H.398V2.747h23.987l87.391 126.139h1.594V2.746h25.664z"
+                  stroke="url(#paint0_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M227.394 177.11c-12.692 0-23.623-2.711-32.793-8.135-9.114-5.479-16.159-13.167-21.135-23.064-4.92-9.952-7.38-21.61-7.38-34.973 0-13.196 2.46-24.826 7.38-34.89 4.976-10.064 11.91-17.92 20.8-23.567 8.946-5.647 19.401-8.47 31.367-8.47a63.128 63.128 0 0121.135 3.606c6.821 2.404 12.943 6.178 18.367 11.322 5.423 5.144 9.701 11.825 12.832 20.045 3.131 8.163 4.697 18.087 4.697 29.773v8.89H180.26V98.861h77.83c0-6.598-1.342-12.441-4.026-17.529-2.684-5.144-6.458-9.198-11.322-12.161-4.809-2.963-10.456-4.445-16.942-4.445-7.045 0-13.195 1.733-18.451 5.2-5.2 3.41-9.225 7.883-12.077 13.419-2.796 5.48-4.193 11.434-4.193 17.864v14.677c0 8.611 1.509 15.935 4.529 21.974 3.075 6.038 7.352 10.651 12.832 13.838 5.479 3.131 11.881 4.697 19.205 4.697 4.753 0 9.086-.671 13-2.013 3.914-1.398 7.297-3.467 10.148-6.206 2.852-2.74 5.032-6.123 6.542-10.149l23.735 4.278c-1.901 6.989-5.312 13.111-10.232 18.367-4.864 5.2-10.987 9.254-18.367 12.161-7.325 2.852-15.684 4.277-25.077 4.277z"
+                  stroke="url(#paint1_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M324.33 45.688l28.431 50.153 28.683-50.153h27.425l-40.173 64.411 40.509 64.411H381.78l-29.019-48.14-28.935 48.14h-27.509l40.09-64.411-39.586-64.411h27.509z"
+                  stroke="url(#paint2_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M539.94 47.03c0-9.226-3.047-16.215-9.142-20.968-6.094-4.808-14.341-7.212-24.741-7.212-7.604 0-14.454 1.23-20.548 3.69-6.095 2.46-11.071 5.843-14.929 10.148-3.858 4.305-6.234 9.198-7.129 14.677-.726 4.585-.251 8.527 1.426 11.826 1.678 3.242 4.054 5.954 7.129 8.135a50.75 50.75 0 0010.064 5.284c3.579 1.341 6.878 2.432 9.897 3.27l16.774 4.697c4.193 1.174 8.862 2.796 14.006 4.865 5.144 2.068 9.952 4.892 14.425 8.47 4.473 3.523 7.884 8.052 10.232 13.587 2.404 5.535 2.936 12.329 1.594 20.38-1.566 9.282-5.396 17.669-11.49 25.161-6.039 7.492-14.034 13.447-23.987 17.864-9.896 4.417-21.442 6.626-34.638 6.626-12.301 0-22.644-1.985-31.031-5.955-8.331-3.97-14.482-9.505-18.451-16.606-3.914-7.101-5.424-15.348-4.529-24.741h21.47c-.559 6.485.727 11.853 3.858 16.102 3.131 4.194 7.492 7.325 13.084 9.394 5.591 2.013 11.797 3.019 18.619 3.019 7.939 0 15.264-1.286 21.973-3.858 6.766-2.628 12.357-6.262 16.774-10.903 4.473-4.697 7.213-10.176 8.219-16.438 1.007-5.703.224-10.344-2.348-13.922-2.572-3.579-6.29-6.486-11.155-8.723-4.864-2.236-10.204-4.193-16.019-5.87l-20.128-6.04c-12.748-3.857-22.449-9.365-29.103-16.521-6.597-7.157-8.974-16.523-7.129-28.097 1.678-9.617 5.731-18.003 12.161-25.16 6.43-7.213 14.398-12.804 23.903-16.774 9.505-4.026 19.737-6.039 30.696-6.039 11.071 0 20.548 2.013 28.432 6.039 7.883 3.97 13.754 9.477 17.612 16.522 3.858 6.99 5.284 15.013 4.277 24.07H539.94z"
+                  stroke="url(#paint3_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M588.63 21.198l3.019-18.451h128.823l-3.019 18.45h-54.012L637.945 174.51h-20.8l25.496-153.312H588.63z"
+                  stroke="url(#paint4_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M862.34 2.747h20.8l-18.787 113.726c-1.957 11.742-6.458 22.225-13.503 31.451-7.045 9.17-16.019 16.41-26.922 21.722-10.903 5.256-23.092 7.884-36.566 7.884-13.475 0-24.77-2.628-33.884-7.884-9.113-5.312-15.655-12.552-19.625-21.722-3.97-9.226-4.976-19.709-3.019-31.451L749.62 2.747h20.8l-18.619 112.049c-1.342 8.387-.699 15.851 1.929 22.393 2.628 6.486 7.045 11.602 13.251 15.348 6.263 3.69 14.174 5.535 23.735 5.535s18.088-1.845 25.58-5.535c7.493-3.746 13.587-8.862 18.284-15.348 4.752-6.542 7.8-14.006 9.141-22.393L862.34 2.746z"
+                  stroke="url(#paint5_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M946.884 174.51h-53.676L921.724 2.747h54.682c16.662 0 30.384 3.494 41.184 10.483 10.84 6.99 18.39 16.97 22.64 29.942 4.31 12.971 4.95 28.46 1.93 46.463-2.91 17.668-8.56 32.849-16.94 45.541-8.33 12.636-19.12 22.365-32.375 29.186-13.196 6.766-28.516 10.148-45.961 10.148zm-29.773-18.451h30.444c14.202 0 26.447-2.795 36.735-8.387 10.344-5.591 18.67-13.558 24.99-23.902 6.38-10.344 10.74-22.617 13.09-36.819 2.34-13.642 2.12-25.356-.67-35.14-2.74-9.842-8.14-17.39-16.19-22.645-7.997-5.312-18.704-7.968-32.123-7.968H939.42l-22.309 134.861z"
+                  stroke="url(#paint6_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M1109.32 2.747l-28.51 171.763h-20.8l28.51-171.763h20.8z"
+                  stroke="url(#paint7_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <path
+                  d="M1278.57 89.97c-3.02 17.893-8.8 33.352-17.36 46.38-8.55 12.972-19.01 22.98-31.36 30.025-12.36 6.989-25.75 10.484-40.18 10.484-14.87 0-27.53-3.635-37.99-10.903-10.4-7.325-17.84-17.669-22.31-31.032-4.42-13.419-5.12-29.298-2.1-47.637 3.02-17.892 8.81-33.324 17.36-46.296 8.56-13.028 19.04-23.036 31.46-30.025C1188.5 3.92 1201.97.398 1216.51.398c14.76 0 27.31 3.663 37.66 10.987 10.4 7.269 17.81 17.613 22.22 31.032 4.48 13.363 5.2 29.214 2.18 47.553zm-19.79-2.683c2.46-14.65 2.1-26.978-1.09-36.987-3.19-10.008-8.47-17.584-15.85-22.728-7.38-5.144-16.16-7.716-26.34-7.716-10.62 0-20.68 2.712-30.19 8.135-9.5 5.368-17.64 13.28-24.4 23.735-6.77 10.4-11.38 23.148-13.84 38.245-2.46 14.649-2.1 26.977 1.09 36.986 3.18 10.008 8.47 17.584 15.85 22.728 7.38 5.144 16.16 7.716 26.33 7.716 10.63 0 20.69-2.684 30.2-8.051 9.5-5.424 17.64-13.335 24.4-23.735 6.77-10.456 11.38-23.232 13.84-38.328z"
+                  stroke="url(#paint8_linear_14176_476)"
+                  stroke-width="0.8"
+                  mask="url(#a)"
+                ></path>
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint3_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint4_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint5_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint6_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint7_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="paint8_linear_14176_476"
+                    x1="640.398"
+                    y1="0.398438"
+                    x2="640.398"
+                    y2="177.53"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#fff"></stop>
+                    <stop offset="1" stop-color="#070707"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
 
-        <div class="footer__bottom">
-          <nav>
-            <ul>
-              <li><a href="#">Terms & conditions</a></li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Cookies</a></li>
-            </ul>
-          </nav>
+            <div class="footer__bottom">
+              <nav>
+                <ul class="bottom__menu">
+                  <li><a href="#">Terms & conditions</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Cookies</a></li>
+                </ul>
+              </nav>
 
-          <p>© 2026 NexStudio. All rights reserved.</p>
+              <p>© 2026 NexStudio. All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
