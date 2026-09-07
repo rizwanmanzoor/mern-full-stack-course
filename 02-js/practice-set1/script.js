@@ -488,3 +488,226 @@ const resNum07 = Number(num07);
 
 console.log("Number(500) === 500", resNum07 === 500);
 
+
+// **** Logical Operators ****
+console.log("\n");
+console.log("**** Logical Operators ****");
+
+// Create isLoggedIn = true and isVerified = true. Use && to check whether both conditions are true.
+
+console.log("\n");
+console.log("41. Create isLoggedIn = true and isVerified = true. Use && to check whether both conditions are true.");
+
+const isLoggedIn = true;
+const isVerified = true;
+
+if (isLoggedIn && isVerified) {
+    console.log("isLoggedIn && isVerified, both conditions are true ");
+}
+
+
+// Create hasTicket = false and isVIP = true. Use || to check whether entry is possible.
+
+console.log("\n");
+console.log("42. Create hasTicket = false and isVIP = true. Use || to check whether entry is possible.");
+
+const hasTicket = false;
+const isVIP = true;
+
+if(hasTicket || isVIP) {
+    console.log("hasTicket || isVIP : entry is possible");
+}
+
+
+// Create isBlocked = false. Use ! to check whether the user is not blocked.
+
+console.log("\n");
+console.log("43. Create isBlocked = false. Use ! to check whether the user is not blocked.");
+
+const isBlocked = false;
+
+if (!isBlocked) {
+    console.log("!isBlocked : user is not blocked");
+}
+
+
+// Create age = 20 and hasID = true. A person is eligible only when both conditions are true. Write the condition.
+
+console.log("\n");
+console.log("44. Create age = 20 and hasID = true. A person is eligible only when both conditions are true. Write the condition.");
+
+const age1 = 20;
+const hasID = true;
+
+if( age1 >= 18 && hasID ) {
+    console.log("age >= 18 && hasID : user is eligible");
+}
+
+
+// Create hasMoney = true and hasCard = false. Check whether the user can make a purchase using ||.
+
+console.log("\n");
+console.log("45. Create hasMoney = true and hasCard = false. Check whether the user can make a purchase using ||.");
+
+const hasMoney = true;
+const hasCard = false;
+
+if ( hasMoney || hasCard ) {
+    console.log("hasMoney || hasCard : user can make a purchase");
+}
+
+
+// **** Conditional Statements ****
+console.log("\n");
+console.log("**** Conditional Statements ****");
+
+
+// Create an age variable. Print You can vote if age is 18 or above; otherwise print You cannot vote.
+
+console.log("\n");
+console.log("46. Create an age variable. Print You can vote if age is 18 or above; otherwise print You cannot vote.");
+
+const voteAge = 19;
+
+if( voteAge >= 18 ) {
+    console.log("you can vote");
+} else {
+    console.log("you cannot vote");
+}
+
+
+// Create a number. Print whether it is Positive, Negative, or Zero.
+
+console.log("\n");
+console.log("47. Create a number. Print whether it is Positive, Negative, or Zero.");
+
+const number = 5;
+
+if ( number > 0 ) {
+    console.log("number is positive");
+} else if ( number < 0 ) {
+    console.log("number is negative");
+} else {
+    console.log("number is zero")
+}
+
+
+// Create a number and use % with if-else to print whether it is Even or Odd.
+
+console.log("\n");
+console.log("48. Create a number and use % with if-else to print whether it is Even or Odd.");
+
+const number03 = 7;
+
+if ( number03 % 2 === 0 ) {
+    console.log("number is even");
+} else {
+    console.log("number is odd");
+}
+
+
+// Create marks. Print Pass if marks are 40 or above; otherwise print Fail.
+
+console.log("\n");
+console.log("49. Create marks. Print Pass if marks are 40 or above; otherwise print Fail.");
+
+const marks = 43;
+
+if ( marks >= 40 ) {
+    console.log("pass");
+} else {
+    console.log("fail");
+}
+
+
+// Create marks and print: A for 90+, B for 75–89, C for 60–74, otherwise D.
+
+console.log("\n");
+console.log("50. Create marks and print: A for 90+, B for 75–89, C for 60–74, otherwise D.");
+
+const marks01 = 83;
+
+if ( marks01 >= 90 ) {
+    console.log("A");
+} else if ( marks01 >= 75 && marks01 < 90 ) {
+    console.log("B");
+} else if ( marks01 >= 60 && marks01 < 75 ) {
+    console.log("C");
+} else {
+    console.log("D");
+}
+
+
+// Create a shopping amount. If it is 2000 or more, print Discount Available; otherwise print No Discount.
+
+console.log("\n");
+console.log("51. Create a shopping amount. If it is 2000 or more, print Discount Available; otherwise print No Discount.");
+
+const shopAmount = 5000;
+
+if ( shopAmount >= 2000 ) {
+    console.log("discount available");
+} else {
+    console.log("no discount");
+}
+
+
+// Create isRaining. If it is true, print Take an umbrella; otherwise print No umbrella needed.
+
+console.log("\n");
+console.log("52. Create isRaining. If it is true, print Take an umbrella; otherwise print No umbrella needed.");
+
+const isRaining = true;
+
+if ( isRaining ) {
+    console.log("take an umbrella");
+} else {
+    console.log("no umbrella needed");
+}
+
+
+// Create isLoggedIn and isAdmin. If both are true print Admin Dashboard. If only logged in is true print User Dashboard. Otherwise print Please Login.
+
+console.log("\n");
+console.log("53. Create isLoggedIn and isAdmin. If both are true print Admin Dashboard. If only logged in is true print User Dashboard. Otherwise print Please Login.");
+
+const isLoggedInn = true;
+const isAdminn = false;
+
+if ( isLoggedInn && isAdminn ) {
+    console.log("admin dashboard");
+} else if ( isLoggedInn ) {
+    console.log("user dashboard");
+} else {
+    console.log("please login");
+}
+
+
+// Create age and hasLicense. A person can drive only when age is 18 or above and they have a license. Print the appropriate message.
+
+console.log("\n");
+console.log("54. Create age and hasLicense. A person can drive only when age is 18 or above and they have a license. Print the appropriate message.");
+
+const age001 = 18;
+const hasLicense = true;
+
+if ( age001 >= 18 && hasLicense ) {
+    console.log(`you are ${age001} years old and have valid license so you can drive.`);
+} else {
+    console.log("you cannot drive.")
+}
+
+
+// Create productStock. If stock is greater than 0, print Product Available; otherwise print Out of Stock.
+
+console.log("\n");
+console.log("55. Create productStock. If stock is greater than 0, print Product Available; otherwise print Out of Stock.");
+
+const productStock = 12;
+
+if ( productStock > 0 ) {
+    console.log("product available");
+} else {
+    console.log("out of stock");
+}
+
