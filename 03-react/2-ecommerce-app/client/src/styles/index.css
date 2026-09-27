@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #8e51ff;
+  --color-secondary: #e0f6fe;
+  --color-accent: #8e51ff;
+
+  --color-background: #ffffff;
+  --color-text-primary: #000000;
+  --color-link: #eaf2ff;
+
+  /* Typography */
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Border Radius */
+  --radius-radius: 8px;
+
+  /* Base spacing */
+  --spacing: 0.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    font-size: 16px;
+  }
+
+  button,
+  a {
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

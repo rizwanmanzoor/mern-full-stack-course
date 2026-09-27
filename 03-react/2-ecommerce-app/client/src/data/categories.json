@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphones",
+    "image": "/images/categories/smartphones.webp",
+    "slug": "smartphones"
+  },
+  {
+    "id": 2,
+    "name": "Laptop",
+    "image": "/images/categories/laptops.webp",
+    "slug": "laptops"
+  },
+  {
+    "id": 3,
+    "name": "Watch",
+    "image": "/images/categories/watches.webp",
+    "slug": "watches"
+  },
+  {
+    "id": 4,
+    "name": "TV",
+    "image": "/images/categories/tv.webp",
+    "slug": "tv"
+  },
+  {
+    "id": 5,
+    "name": "Camera",
+    "image": "/images/categories/cameras.webp",
+    "slug": "cameras"
+  }
+]

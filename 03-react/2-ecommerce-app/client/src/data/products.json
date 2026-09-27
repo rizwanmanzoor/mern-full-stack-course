@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 16",
+    "category": "Smartphones",
+    "price": 799,
+    "oldPrice": 899,
+    "image": "/images/products/iphone-16.webp",
+    "badge": "20% OFF",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Apple Watch Series 9",
+    "category": "Watch",
+    "price": 299,
+    "oldPrice": null,
+    "image": "/images/products/apple-watch.webp",
+    "badge": "New",
+    "featured": true
+  }
+]
