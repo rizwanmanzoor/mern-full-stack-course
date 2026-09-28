@@ -1,6 +1,6 @@
 import { Headphones } from "lucide-react";
-import appstoreLogo from "@/assets/images/app-store.svg";
-import googleplayLogo from "@/assets/images/google-play.svg";
+import appstoreLogo from "@/assets/images/app/app-store.svg";
+import googleplayLogo from "@/assets/images/app/google-play.svg";
 import { footerLinks, paymentMethods, socialLinks } from "@/data/footer";
 
 export default function Footer() {

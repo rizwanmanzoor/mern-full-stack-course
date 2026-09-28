@@ -1,16 +1,43 @@
 export default function SectionHeading({ title, description, action }) {
   return (
-    <div className="flex flex-col sm:flex-row gap-5 sm:items-end justify-between mb-16">
+    <div
+      className="
+        mb-10
+        flex
+        flex-col
+        gap-5
+        sm:mb-16
+        sm:flex-row
+        sm:items-end
+        sm:justify-between
+      "
+    >
+      {/* Heading */}
       <div className="text-left lg:max-w-lg">
-        <h2 className="mb-2 text-5xl font-medium text-gray-800 tracking-[1.92px]">
+        <h2
+          className="
+            mb-2
+            text-3xl
+            font-medium
+            tracking-[-1px]
+            text-gray-800
+            sm:text-4xl
+            lg:text-5xl
+            lg:tracking-[-1.92px]
+          "
+        >
           {title}
         </h2>
+
         {description && (
-          <p className="text-base text-gray-500">{description}</p>
+          <p className="text-sm leading-6 text-gray-500 sm:text-base">
+            {description}
+          </p>
         )}
       </div>
 
-      <div className="flex sm:justify-end">{action}</div>
+      {/* Optional Action */}
+      {action && <div className="flex shrink-0 sm:justify-end">{action}</div>}
     </div>
   );
 }

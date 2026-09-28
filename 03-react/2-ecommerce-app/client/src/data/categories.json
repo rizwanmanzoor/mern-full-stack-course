@@ -2,31 +2,49 @@
   {
     "id": 1,
     "name": "Smartphones",
-    "image": "/images/categories/smartphones.webp",
+    "image": "/images/categories/smartphone.webp",
     "slug": "smartphones"
   },
   {
     "id": 2,
-    "name": "Laptop",
-    "image": "/images/categories/laptops.webp",
+    "name": "Laptops",
+    "image": "/images/categories/laptop.webp",
     "slug": "laptops"
   },
   {
     "id": 3,
-    "name": "Watch",
-    "image": "/images/categories/watches.webp",
+    "name": "Watches",
+    "image": "/images/categories/watch.webp",
     "slug": "watches"
   },
   {
     "id": 4,
-    "name": "TV",
+    "name": "TVs",
     "image": "/images/categories/tv.webp",
     "slug": "tv"
   },
   {
     "id": 5,
-    "name": "Camera",
-    "image": "/images/categories/cameras.webp",
+    "name": "Cameras",
+    "image": "/images/categories/camera.webp",
     "slug": "cameras"
+  },
+  {
+    "id": 6,
+    "name": "Sound Boxes",
+    "image": "/images/categories/sound-box.webp",
+    "slug": "sound-boxes"
+  },
+  {
+    "id": 7,
+    "name": "TVs",
+    "image": "/images/categories/tv.webp",
+    "slug": "tv"
+  },
+   {
+    "id": 8,
+    "name": "Watches",
+    "image": "/images/categories/watch.webp",
+    "slug": "watches"
   }
 ]

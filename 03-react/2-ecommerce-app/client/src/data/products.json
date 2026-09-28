@@ -1,22 +1,330 @@
 [
   {
     "id": 1,
-    "name": "iPhone 16",
-    "category": "Smartphones",
-    "price": 799,
-    "oldPrice": 899,
-    "image": "/images/products/iphone-16.webp",
-    "badge": "20% OFF",
-    "featured": true
+    "name": "Canon EOS",
+    "slug": "canon-eos",
+    "category": "cameras",
+    "price": 899,
+    "featured": true,
+    "badge": "New",
+    "images": [
+      "/images/products/cameras/canon-eos/01.webp",
+      "/images/products/cameras/canon-eos/02.webp",
+      "/images/products/cameras/canon-eos/03.webp"
+    ]
   },
   {
     "id": 2,
-    "name": "Apple Watch Series 9",
-    "category": "Watch",
-    "price": 299,
-    "oldPrice": null,
-    "image": "/images/products/apple-watch.webp",
+    "name": "Nikon Z5",
+    "slug": "nikon-z5",
+    "category": "cameras",
+    "price": 999,
+    "featured": false,
+    "images": [
+      "/images/products/cameras/nikon-z5/01.webp",
+      "/images/products/cameras/nikon-z5/02.webp",
+      "/images/products/cameras/nikon-z5/03.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nikon Z6",
+    "slug": "nikon-z6",
+    "category": "cameras",
+    "price": 1999,
+    "featured": false,
+    "images": [
+      "/images/products/cameras/nikon-z6/01.webp",
+      "/images/products/cameras/nikon-z6/02.webp",
+      "/images/products/cameras/nikon-z6/03.webp"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sony Cyber",
+    "slug": "sony-cyber",
+    "category": "cameras",
+    "price": 1499,
+    "featured": false,
+    "images": [
+      "/images/products/cameras/sony-cyber/01.webp",
+      "/images/products/cameras/sony-cyber/02.webp",
+      "/images/products/cameras/sony-cyber/03.webp"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dell 15",
+    "slug": "dell-15",
+    "category": "laptops",
+    "price": 799,
+    "badge":"15% OFF",
+    "featured": true,
+    "images": [
+      "/images/products/laptops/dell-15/01.webp",
+      "/images/products/laptops/dell-15/02.webp",
+      "/images/products/laptops/dell-15/03.webp",
+      "/images/products/laptops/dell-15/04.webp"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "HP EliteBook 640",
+    "slug": "hp-elitebook-640",
+    "category": "laptops",
+    "price": 899,
+    "featured": false,
+    "images": [
+      "/images/products/laptops/hp-elitebook-640/01.webp",
+      "/images/products/laptops/hp-elitebook-640/02.webp",
+      "/images/products/laptops/hp-elitebook-640/03.webp",
+      "/images/products/laptops/hp-elitebook-640/04.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Lenovo IdeaPad",
+    "slug": "lenovo-ideapad",
+    "category": "laptops",
+    "price": 699,
+    "featured": false,
+    "images": [
+      "/images/products/laptops/lenovo-ideapad/01.webp",
+      "/images/products/laptops/lenovo-ideapad/02.webp",
+      "/images/products/laptops/lenovo-ideapad/03.webp"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lenovo V15",
+    "slug": "lenovo-v15",
+    "category": "laptops",
+    "price": 749,
+    "featured": false,
+    "images": [
+      "/images/products/laptops/lenovo-v15/01.webp",
+      "/images/products/laptops/lenovo-v15/02.webp",
+      "/images/products/laptops/lenovo-v15/03.webp"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Infinix Smart 20",
+    "slug": "infinix-smart-20",
+    "category": "phones",
+    "price": 199,
+    "badge": "Best Seller",
+    "featured": true,
+    "images": [
+      "/images/products/phones/infinix-smart-20/01.webp",
+      "/images/products/phones/infinix-smart-20/02.webp",
+      "/images/products/phones/infinix-smart-20/03.webp"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "iPhone 16",
+    "slug": "iphone-16",
+    "category": "phones",
+    "price": 799,
+    "originalPrice": 999,
+    "featured": false,
+    "badge": "15% OFF",
+    "images": [
+      "/images/products/phones/iphone-16/01.webp",
+      "/images/products/phones/iphone-16/02.webp",
+      "/images/products/phones/iphone-16/03.webp"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Samsung Galaxy S26",
+    "slug": "samsung-galaxy-s26",
+    "category": "phones",
+    "price": 899,
+    "featured": false,
+    "images": [
+      "/images/products/phones/samsung-galaxy-s26/01.webp",
+      "/images/products/phones/samsung-galaxy-s26/02.webp",
+      "/images/products/phones/samsung-galaxy-s26/03.webp"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "SEGO",
+    "slug": "sego",
+    "category": "phones",
+    "price": 249,
+    "badge": "Best Choice",
+    "featured": true,
+    "images": [
+      "/images/products/phones/sego/01.webp",
+      "/images/products/phones/sego/02.webp",
+      "/images/products/phones/sego/03.webp"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Audionic Pace 8",
+    "slug": "audionic-pace-8",
+    "category": "sound-boxes",
+    "price": 129,
     "badge": "New",
-    "featured": true
+    "featured": true,
+    "images": [
+      "/images/products/sound-boxes/audionic-pace-8/01.webp",
+      "/images/products/sound-boxes/audionic-pace-8/02.webp",
+      "/images/products/sound-boxes/audionic-pace-8/03.webp",
+      "/images/products/sound-boxes/audionic-pace-8/04.webp"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Bluks BX-192",
+    "slug": "bluks-bx-192",
+    "category": "sound-boxes",
+    "price": 149,
+    "featured": false,
+    "images": [
+      "/images/products/sound-boxes/bluks-bx-192/01.webp",
+      "/images/products/sound-boxes/bluks-bx-192/02.webp",
+      "/images/products/sound-boxes/bluks-bx-192/03.webp"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bluks BX-193",
+    "slug": "bluks-bx-193",
+    "category": "sound-boxes",
+    "price": 159,
+    "badge": "Best Choice",
+    "featured": true,
+    "images": [
+      "/images/products/sound-boxes/bluks-bx-193/01.webp",
+      "/images/products/sound-boxes/bluks-bx-193/02.webp",
+      "/images/products/sound-boxes/bluks-bx-193/03.webp"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Zero Thunder",
+    "slug": "zero-thunder",
+    "category": "sound-boxes",
+    "price": 179,
+    "featured": false,
+    "images": [
+      "/images/products/sound-boxes/zero-thunder/01.webp",
+      "/images/products/sound-boxes/zero-thunder/02.webp"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Ecostar",
+    "slug": "ecostar",
+    "category": "tv",
+    "price": 499,
+    "badge": "Best Seller",
+    "featured": true,
+    "images": [
+      "/images/products/tv/ecostar/01.webp",
+      "/images/products/tv/ecostar/02.webp",
+      "/images/products/tv/ecostar/03.webp"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Sony 40",
+    "slug": "sony-40",
+    "category": "tv",
+    "price": 599,
+    "featured": false,
+    "images": [
+      "/images/products/tv/sony-40/01.webp",
+      "/images/products/tv/sony-40/02.webp",
+      "/images/products/tv/sony-40/03.webp"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Sony 55",
+    "slug": "sony-55",
+    "category": "tv",
+    "price": 799,
+    "featured": false,
+    "images": [
+      "/images/products/tv/sony-55/01.webp",
+      "/images/products/tv/sony-55/02.webp",
+      "/images/products/tv/sony-55/03.webp"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "TCL 55",
+    "slug": "tcl-55",
+    "category": "tv",
+    "price": 699,
+    "featured": false,
+    "images": [
+      "/images/products/tv/tcl-55/01.webp",
+      "/images/products/tv/tcl-55/02.webp",
+      "/images/products/tv/tcl-55/03.webp"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Kieslect Watch",
+    "slug": "kieslect-watch",
+    "category": "watches",
+    "price": 129,
+    "badge": "New",
+    "featured": true,
+    "images": [
+      "/images/products/watches/kieslect-watch/01.webp",
+      "/images/products/watches/kieslect-watch/02.webp",
+      "/images/products/watches/kieslect-watch/03.webp",
+      "/images/products/watches/kieslect-watch/04.webp"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Prism Smart Watch",
+    "slug": "prism-smart-watch",
+    "category": "watches",
+    "price": 99,
+    "featured": false,
+    "images": [
+      "/images/products/watches/prism-smart-watch/01.webp",
+      "/images/products/watches/prism-smart-watch/02.webp",
+      "/images/products/watches/prism-smart-watch/03.webp",
+      "/images/products/watches/prism-smart-watch/04.webp"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Samsung Smart Watch 8",
+    "slug": "samsung-smart-watch8",
+    "category": "watches",
+    "price": 299,
+    "featured": false,
+    "images": [
+      "/images/products/watches/samsung-smart-watch8/01.webp",
+      "/images/products/watches/samsung-smart-watch8/02.webp",
+      "/images/products/watches/samsung-smart-watch8/03.webp",
+      "/images/products/watches/samsung-smart-watch8/04.webp"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Zero Luna Watch",
+    "slug": "zero-luna-watch",
+    "category": "watches",
+    "price": 89,
+    "featured": false,
+    "images": [
+      "/images/products/watches/zero-luna-watch/01.webp",
+      "/images/products/watches/zero-luna-watch/02.webp",
+      "/images/products/watches/zero-luna-watch/03.webp",
+      "/images/products/watches/zero-luna-watch/04.webp"
+    ]
   }
 ]
