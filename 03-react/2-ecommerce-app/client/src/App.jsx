@@ -1,7 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 
-import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
+import MainLayout from "./layouts/MainLayout";
 
 export default function App() {
   return (

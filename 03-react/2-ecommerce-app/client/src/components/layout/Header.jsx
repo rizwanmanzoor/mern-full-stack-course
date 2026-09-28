@@ -1,7 +1,5 @@
 import { useState } from "react";
-import ProductMegaMenu from "./ProductMegaMenu";
-import { currencies, languages } from "@/data/header";
-
+import { Link, NavLink } from "react-router-dom";
 import {
   ChevronDown,
   Globe,
@@ -12,6 +10,10 @@ import {
   User,
   X,
 } from "lucide-react";
+
+import ProductMegaMenu from "@/components/layout/ProductMegaMenu";
+
+import { currencies, languages } from "@/data/header";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -162,13 +164,13 @@ export default function Header() {
 
           {/* Sign In */}
 
-          <a
-            href="/"
+          <Link
+            to="/"
             className="hidden items-center gap-2 text-sm font-medium text-gray-900 transition-colors lg:flex"
           >
             <User size={20} />
             Sign In / Register
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -197,13 +199,13 @@ export default function Header() {
             =========================== */}
 
             <div className="flex items-center">
-              <a href="/" aria-label="TechShelf Home">
+              <Link to="/" aria-label="TechShelf Home">
                 <img
                   src="./logo.svg"
                   alt="TechShelf"
                   className="h-8 w-auto sm:h-7.5"
                 />
-              </a>
+              </Link>
 
               {/* Desktop Search */}
               <div className="relative ml-6 hidden lg:block">
@@ -238,25 +240,25 @@ export default function Header() {
             =========================== */}
 
             <div className="hidden items-center lg:flex">
-              <a
-                href="/"
+              <NavLink
+                to="/"
                 className="px-3.5 py-7 text-base font-medium text-gray-800 transition-colors hover:text-primary"
               >
                 Home
-              </a>
+              </NavLink>
 
-              <a
-                href="/shop"
+              <NavLink
+                to="/shop"
                 className="px-3.5 py-7 text-base font-medium text-gray-800 transition-colors hover:text-primary"
               >
                 Shop
-              </a>
+              </NavLink>
 
               {/* Products Mega Menu */}
 
               <div className="group">
-                <a
-                  href="/shop"
+                <NavLink
+                  to="/shop"
                   className="
                     inline-flex
                     items-center
@@ -278,7 +280,7 @@ export default function Header() {
                       group-hover:rotate-180
                     "
                   />
-                </a>
+                </NavLink>
 
                 <div
                   className="
@@ -303,15 +305,15 @@ export default function Header() {
 
               {/* Sale */}
 
-              <a
-                href="/shop"
+              <NavLink
+                to="/shop"
                 className="flex items-center gap-1 px-3.5 py-7 text-base font-medium text-gray-800 transition-colors hover:text-primary"
               >
                 Sale
                 <span className="inline-flex h-5 items-center justify-center rounded-full bg-primary/10 px-2 text-xs font-medium text-primary">
                   20% OFF
                 </span>
-              </a>
+              </NavLink>
             </div>
 
             {/* ==========================
@@ -372,9 +374,9 @@ export default function Header() {
 
             {/* Logo */}
 
-            <a href="/" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>
               <img src="./logo.svg" alt="TechShelf" className="h-9 w-auto" />
-            </a>
+            </Link>
 
             {/* Mobile actions */}
 
@@ -406,21 +408,21 @@ export default function Header() {
 
         <div className="px-4 py-6">
           <nav className="space-y-1">
-            <a
-              href="/"
+            <NavLink
+              to="/"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-3 text-base font-medium text-gray-900"
             >
               Home
-            </a>
+            </NavLink>
 
-            <a
-              href="/shop"
+            <NavLink
+              to="/shop"
               onClick={() => setMobileMenuOpen(false)}
               className="block py-3 text-base font-medium text-gray-900"
             >
               Shop
-            </a>
+            </NavLink>
 
             {/* Mobile Products */}
 
@@ -451,26 +453,26 @@ export default function Header() {
                       Smart Devices
                     </p>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Smartphones
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Laptops
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Tablets
-                    </a>
+                    </NavLink>
                   </div>
 
                   <div>
@@ -478,26 +480,26 @@ export default function Header() {
                       Audio & Entertainment
                     </p>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Headphones
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Speakers
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Gaming
-                    </a>
+                    </NavLink>
                   </div>
 
                   <div>
@@ -505,26 +507,26 @@ export default function Header() {
                       Accessories
                     </p>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Cases
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Chargers
-                    </a>
+                    </NavLink>
 
-                    <a
-                      href="/shop"
+                    <NavLink
+                      to="/shop"
                       className="block py-1.5 text-sm text-gray-500"
                     >
                       Power Banks
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -532,8 +534,8 @@ export default function Header() {
 
             {/* Sale */}
 
-            <a
-              href="/shop"
+            <Link
+              to="/shop"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center gap-2 py-3 text-base font-medium text-gray-900"
             >
@@ -541,7 +543,7 @@ export default function Header() {
               <span className="inline-flex h-5 items-center justify-center rounded-full bg-primary/10 px-2 text-xs font-medium text-primary">
                 20% OFF
               </span>
-            </a>
+            </Link>
           </nav>
         </div>
       </div>

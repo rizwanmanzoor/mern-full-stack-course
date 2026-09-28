@@ -1,4 +1,7 @@
+import { Link } from "react-router-dom";
+
 import { productMenu } from "@/data/productMenu";
+
 import menuImage from "@/assets/images/menu-image.webp";
 
 export default function ProductMegaMenu({ mobile = false }) {
@@ -17,9 +20,9 @@ export default function ProductMegaMenu({ mobile = false }) {
 
             <div className="space-y-4">
               {group.items.map((item) => (
-                <a
+                <Link
                   key={item}
-                  href="/shop"
+                  to="/shop"
                   className="
                     block
                     text-[18px]
@@ -30,7 +33,7 @@ export default function ProductMegaMenu({ mobile = false }) {
                   "
                 >
                   {item}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -72,9 +75,9 @@ export default function ProductMegaMenu({ mobile = false }) {
 
                 <div className="space-y-4">
                   {group.items.map((item) => (
-                    <a
+                    <Link
                       key={item}
-                      href="/shop"
+                      to="/shop"
                       className="
                         block
                         text-[19px]
@@ -85,7 +88,7 @@ export default function ProductMegaMenu({ mobile = false }) {
                       "
                     >
                       {item}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -105,8 +108,8 @@ export default function ProductMegaMenu({ mobile = false }) {
               />
 
               <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
-                <a
-                  href="/shop"
+                <Link
+                  to="/shop"
                   className="
                     inline-flex
                     whitespace-nowrap
@@ -124,7 +127,7 @@ export default function ProductMegaMenu({ mobile = false }) {
                   "
                 >
                   Best Seller
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Button from "@/components/ui/Button";
 import Container from "@/components/layout/Container";
 
@@ -103,9 +105,9 @@ export default function Hero() {
 
           <div className="grid gap-2.5">
             {heroCards.map((card) => (
-              <a
+              <Link
                 key={card.title}
-                href={card.href}
+                to={card.href}
                 className={`
                   flex
                   min-h-65
@@ -137,7 +139,7 @@ export default function Hero() {
                   alt=""
                   className="mt-5 max-h-45 max-w-full object-contain"
                 />
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -145,8 +147,8 @@ export default function Hero() {
               Smartphone Card
           ================================= */}
 
-          <a
-            href="/shop"
+          <Link
+            to="/shop"
             className="
               flex
               min-h-75
@@ -180,7 +182,7 @@ export default function Hero() {
               alt=""
               className="mt-6 max-w-full object-contain"
             />
-          </a>
+          </Link>
         </div>
       </Container>
     </section>

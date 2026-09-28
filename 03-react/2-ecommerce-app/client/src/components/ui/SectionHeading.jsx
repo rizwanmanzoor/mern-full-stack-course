@@ -1,19 +1,28 @@
-export default function SectionHeading({ title, description, action }) {
+export default function SectionHeading({
+  title,
+  description,
+  action,
+  align = "left",
+}) {
+  const isCentered = align === "center";
+
   return (
     <div
-      className="
+      className={`
         mb-10
         flex
         flex-col
         gap-5
         sm:mb-16
-        sm:flex-row
-        sm:items-end
-        sm:justify-between
-      "
+        ${isCentered ? "items-center text-center" : "sm:flex-row sm:items-end sm:justify-between"}
+      `}
     >
       {/* Heading */}
-      <div className="text-left lg:max-w-lg">
+      <div
+        className={`
+          ${isCentered ? "max-w-2xl text-center" : "text-left lg:max-w-lg"}
+        `}
+      >
         <h2
           className="
             mb-2
@@ -37,7 +46,11 @@ export default function SectionHeading({ title, description, action }) {
       </div>
 
       {/* Optional Action */}
-      {action && <div className="flex shrink-0 sm:justify-end">{action}</div>}
+      {action && (
+        <div className="flex shrink-0 sm:justify-end">
+          {action}
+        </div>
+      )}
     </div>
   );
 }

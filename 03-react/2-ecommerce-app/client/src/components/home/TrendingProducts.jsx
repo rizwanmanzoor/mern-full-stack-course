@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import Container from "@/components/layout/Container";
 import ProductCard from "@/components/product/ProductCard";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -16,8 +18,8 @@ const trendingProducts = products.filter(
           title="Trending Now"
           description="Our most-loved gadgets, trusted by thousands of customers."
           action={
-            <a
-              href="/shop"
+            <Link
+              to="/shop"
               className="
                 inline-flex
                 items-center
@@ -34,13 +36,13 @@ const trendingProducts = products.filter(
               "
             >
               Explore All
-            </a>
+            </Link>
           }
         />
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-11 sm:grid-cols-2 lg:grid-cols-4">
           {trendingProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} className="bg-white" />
           ))}
         </div>
       </Container>

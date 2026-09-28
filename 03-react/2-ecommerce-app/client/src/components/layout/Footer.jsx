@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { Headphones } from "lucide-react";
+
+import { footerLinks, paymentMethods, socialLinks } from "@/data/footer";
+
 import appstoreLogo from "@/assets/images/app/app-store.svg";
 import googleplayLogo from "@/assets/images/app/google-play.svg";
-import { footerLinks, paymentMethods, socialLinks } from "@/data/footer";
 
 export default function Footer() {
   return (
@@ -18,13 +21,13 @@ export default function Footer() {
             ================================= */}
 
             <div className="lg:col-span-4">
-              <a href="/" className="mb-6 block">
+              <Link to="/" className="mb-6 block">
                 <img
                   src="./logo.svg"
                   alt="TechShelf"
                   className="h-auto w-30"
                 />
-              </a>
+              </Link>
 
               <p className="max-w-sm text-sm leading-6 text-gray-500">
                 TechGrids comes with all the essential UI components you need to
@@ -41,6 +44,7 @@ export default function Footer() {
                     <a
                       key={social.label}
                       href={social.href}
+                      target="_blank"
                       aria-label={social.label}
                       className="transition-opacity hover:opacity-70"
                     >
@@ -68,27 +72,27 @@ export default function Footer() {
                 <ul className="space-y-3">
                   {section.links.map((link) => (
                     <li key={link}>
-                      <a
-                        href="/shop"
+                      <Link
+                        to="/shop"
                         className="text-sm font-medium leading-6 text-gray-500 transition-colors hover:text-gray-800"
                       >
                         {link}
-                      </a>
+                      </Link>
                     </li>
                   ))}
 
                   {/* Sale */}
                   {section.label === "Shoes" && (
                     <li>
-                      <a
-                        href="/shop"
+                      <Link
+                        to="/shop"
                         className="inline-flex items-center text-sm font-medium leading-6 text-gray-500 transition-colors hover:text-gray-800"
                       >
                         Sale
                         <span className="ml-2 inline-block shrink-0 rounded-full bg-red-50 px-2 py-0.5 text-xs font-medium leading-4 text-red-700">
                           Hot item
                         </span>
-                      </a>
+                      </Link>
                     </li>
                   )}
                 </ul>
@@ -336,26 +340,26 @@ export default function Footer() {
           <p className="text-xs text-gray-500">© Copyright 2026 - TechShelf.</p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 lg:justify-end">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-xs text-gray-500 transition-colors hover:text-gray-800"
             >
               Refund Policy
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-xs text-gray-500 transition-colors hover:text-gray-800"
             >
               Terms of Service
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-xs text-gray-500 transition-colors hover:text-gray-800"
             >
               Shipping policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

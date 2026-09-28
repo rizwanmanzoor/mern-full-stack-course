@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import { Eye, Heart, Repeat2, ShoppingCart } from "lucide-react";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, className = "" }) {
   return (
     <article>
       {/* Product Image */}
-      <div className="group relative mb-5 overflow-visible rounded-xl bg-white">
-        <a
-          href={`/product/${product.id}`}
+      <div className={` group relative mb-5 overflow-visible rounded-xl ${className} `}>
+        <Link
+          to={`/product/${product.id}`}
           className="
             relative
             z-10
@@ -57,7 +58,7 @@ export default function ProductCard({ product }) {
               group-hover:scale-105
             "
           />
-        </a>
+        </Link>
 
         {/* Actions */}
         <div
@@ -104,9 +105,9 @@ export default function ProductCard({ product }) {
       </div>
 
       {/* Product Info */}
-      <div className="mb-4">
+      <div className="mb-4 mx-2">
         <h3 className="text-base font-medium text-gray-900">
-          <a href={`/product/${product.id}`}>{product.name}</a>
+          <Link to={`/product/${product.id}`}>{product.name}</Link>
         </h3>
 
         {product.originalPrice ? (

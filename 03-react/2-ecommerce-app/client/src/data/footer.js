@@ -1,12 +1,12 @@
+import xLogo from "@/assets/icons/x.svg";
 import facebookLogo from "@/assets/icons/facebook.svg";
 import instagramLogo from "@/assets/icons/instagram.svg";
-import xLogo from "@/assets/icons/x.svg";
 
-import mastercardLogo from "@/assets/payments/mastercard.svg";
 import visaLogo from "@/assets/payments/visa.svg";
-import paypalLogo from "@/assets/payments/paypal.svg";
 import amexLogo from "@/assets/payments/amex.svg";
+import paypalLogo from "@/assets/payments/paypal.svg";
 import wetunionLogo from "@/assets/payments/westunion.svg";
+import mastercardLogo from "@/assets/payments/mastercard.svg";
 
 export const clothingLinks = [
   "Tops",

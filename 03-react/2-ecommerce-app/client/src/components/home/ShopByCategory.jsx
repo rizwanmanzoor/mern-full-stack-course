@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Container from "@/components/layout/Container";
@@ -113,8 +114,8 @@ export default function ShopByCategory() {
               "
             >
               {/* Image */}
-              <a
-                href="/shop"
+              <Link
+                to="/shop"
                 className="
                   mb-5
                   block
@@ -137,11 +138,11 @@ export default function ShopByCategory() {
                     group-hover:scale-105
                   "
                 />
-              </a>
+              </Link>
 
               {/* Category Name */}
               <h3 className="text-base font-medium text-gray-800 transition-colors group-hover:text-primary">
-                <a href="/shop">{category.name}</a>
+                <Link to="/shop">{category.name}</Link>
               </h3>
             </article>
           ))}
