@@ -1,10 +1,16 @@
+import { Analytics } from "@vercel/analytics/next";
+
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 
 export default function App() {
   return (
-    <MainLayout>
-      <Home />
-    </MainLayout>
-  )
+    <>
+      <MainLayout>
+        <Home />
+      </MainLayout>
+      
+      <Analytics />
+    </>
+  );
 }
