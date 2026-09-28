@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from '@vercel/analytics/react';
 
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
@@ -9,7 +9,7 @@ export default function App() {
       <MainLayout>
         <Home />
       </MainLayout>
-      
+
       <Analytics />
     </>
   );
