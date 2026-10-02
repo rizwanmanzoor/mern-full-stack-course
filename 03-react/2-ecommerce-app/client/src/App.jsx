@@ -1,13 +1,13 @@
 import { Analytics } from '@vercel/analytics/react';
 
-import Home from "./pages/Home";
+import AppRoutes from "@/routes/AppRoutes";
 import MainLayout from "./layouts/MainLayout";
 
 export default function App() {
   return (
     <>
       <MainLayout>
-        <Home />
+        <AppRoutes />
       </MainLayout>
 
       <Analytics />
