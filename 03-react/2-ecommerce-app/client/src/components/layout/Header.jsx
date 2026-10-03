@@ -13,9 +13,15 @@ import {
 
 import ProductMegaMenu from "@/components/layout/ProductMegaMenu";
 
+import { useCart } from "@/context/useCart";
 import { currencies, languages } from "@/data/header";
 
 export default function Header() {
+  const {
+    itemCount,
+    openCart,
+  } = useCart();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
@@ -331,14 +337,17 @@ export default function Header() {
 
               <button
                 type="button"
+                onClick={openCart}
                 className="relative inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700 transition hover:text-gray-900 lg:h-11 lg:w-11"
                 aria-label="Shopping cart"
               >
                 <ShoppingCart size={20} />
 
-                <span className="absolute -right-1 -top-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-semibold text-white">
-                  0
-                </span>
+                {itemCount > 0 && (
+                  <span className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-white">
+                    {itemCount}
+                  </span>
+                )}
               </button>
             </div>
           </div>
@@ -391,14 +400,20 @@ export default function Header() {
 
               <button
                 type="button"
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  openCart();
+                }}
                 className="relative inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700"
                 aria-label="Shopping cart"
               >
                 <ShoppingCart />
 
-                <span className="absolute -right-1 -top-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-semibold text-white">
-                  0
-                </span>
+                {itemCount > 0 && (
+                  <span className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-white">
+                    {itemCount}
+                  </span>
+                )}
               </button>
             </div>
           </div>

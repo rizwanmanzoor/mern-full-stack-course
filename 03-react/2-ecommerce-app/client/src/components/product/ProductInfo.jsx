@@ -1,4 +1,7 @@
+import { useState } from "react";
 import { Heart, Star } from "lucide-react";
+
+import { useCart } from "@/context/useCart";
 
 function formatVariantLabel(type) {
   const labels = {
@@ -16,7 +19,27 @@ function formatVariantLabel(type) {
   );
 }
 
+function getInitialVariants(product) {
+  return Object.fromEntries(
+    (product.variantOptions ?? []).map((variant) => [
+      variant.type,
+      variant.values[0],
+    ]),
+  );
+}
+
 export default function ProductInfo({ product }) {
+  const { addToCart, openCart } = useCart();
+
+  const [quantity, setQuantity] = useState(1);
+
+  const [selectedColor, setSelectedColor] = useState(
+    product.colorOptions?.[0]?.slug ?? null,
+  );
+
+  const [selectedVariants, setSelectedVariants] =
+    useState(() => getInitialVariants(product));
+
   const discount =
     product.originalPrice && product.price
       ? Math.round(
@@ -26,7 +49,26 @@ export default function ProductInfo({ product }) {
         )
       : null;
 
-  const isInStock = product.availability === "in-stock";
+  const isInStock =
+    product.availability === "in-stock";
+
+  const maxQuantity =
+    product.inventory?.quantity ?? Infinity;
+
+  const handleAddToCart = () => {
+    if (!isInStock) {
+      return;
+    }
+
+    addToCart({
+      productId: product.id,
+      quantity,
+      selectedColor,
+      selectedVariants,
+    });
+
+    openCart();
+  };
 
   return (
     <div>
@@ -97,14 +139,19 @@ export default function ProductInfo({ product }) {
           </h3>
 
           <div className="flex items-center gap-3">
-            {product.colorOptions.map((color, index) => {
-              const isSelected = index === 0;
+            {product.colorOptions.map((color) => {
+              const isSelected =
+                selectedColor === color.slug;
 
               return (
                 <button
                   key={color.slug}
                   type="button"
+                  onClick={() =>
+                    setSelectedColor(color.slug)
+                  }
                   aria-label={`Select ${color.name}`}
+                  aria-pressed={isSelected}
                   className={`size-8 rounded-full border transition ${
                     isSelected
                       ? "ring-2 ring-primary ring-offset-2"
@@ -131,13 +178,20 @@ export default function ProductInfo({ product }) {
           </h3>
 
           <div className="flex flex-wrap gap-2">
-            {variant.values.map((value, index) => {
-              const isSelected = index === 0;
+            {variant.values.map((value) => {
+              const isSelected =
+                selectedVariants[variant.type] === value;
 
               return (
                 <button
                   key={value}
                   type="button"
+                  onClick={() =>
+                    setSelectedVariants((current) => ({
+                      ...current,
+                      [variant.type]: value,
+                    }))
+                  }
                   className={`rounded-lg border px-4 py-2 text-sm transition ${
                     isSelected
                       ? "border-primary bg-primary/5 text-primary"
@@ -157,7 +211,12 @@ export default function ProductInfo({ product }) {
         <div className="flex h-12 w-fit items-center rounded-lg border border-gray-200">
           <button
             type="button"
-            disabled={!isInStock}
+            onClick={() =>
+              setQuantity((current) =>
+                Math.max(1, current - 1),
+              )
+            }
+            disabled={!isInStock || quantity <= 1}
             className="flex h-full w-10 items-center justify-center text-gray-500 transition hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Decrease quantity"
           >
@@ -165,12 +224,19 @@ export default function ProductInfo({ product }) {
           </button>
 
           <span className="w-8 text-center text-sm font-medium text-gray-900">
-            1
+            {quantity}
           </span>
 
           <button
             type="button"
-            disabled={!isInStock}
+            onClick={() =>
+              setQuantity((current) =>
+                Math.min(maxQuantity, current + 1),
+              )
+            }
+            disabled={
+              !isInStock || quantity >= maxQuantity
+            }
             className="flex h-full w-10 items-center justify-center text-gray-500 transition hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Increase quantity"
           >
@@ -181,10 +247,13 @@ export default function ProductInfo({ product }) {
         <div className="flex flex-1 gap-3">
           <button
             type="button"
+            onClick={handleAddToCart}
             disabled={!isInStock}
             className="flex h-12 flex-1 items-center justify-center rounded-lg bg-primary px-6 text-sm font-medium text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-gray-300"
           >
-            {isInStock ? "Add to cart" : "Out of stock"}
+            {isInStock
+              ? "Add to cart"
+              : "Out of stock"}
           </button>
 
           <button
@@ -192,7 +261,10 @@ export default function ProductInfo({ product }) {
             aria-label="Add to wishlist"
             className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition hover:border-primary hover:text-primary"
           >
-            <Heart size={19} strokeWidth={1.5} />
+            <Heart
+              size={19}
+              strokeWidth={1.5}
+            />
           </button>
         </div>
       </div>
@@ -201,12 +273,16 @@ export default function ProductInfo({ product }) {
       <div className="mt-5 flex items-center gap-2 text-sm">
         <span
           className={`size-2 rounded-full ${
-            isInStock ? "bg-green-500" : "bg-red-500"
+            isInStock
+              ? "bg-green-500"
+              : "bg-red-500"
           }`}
         />
 
         <span className="text-gray-500">
-          {isInStock ? "In stock" : "Out of stock"}
+          {isInStock
+            ? "In stock"
+            : "Out of stock"}
         </span>
 
         {isInStock &&
