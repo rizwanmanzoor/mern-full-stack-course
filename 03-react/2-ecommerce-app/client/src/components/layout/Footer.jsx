@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="lg:col-span-4">
               <Link to="/" className="mb-6 block">
                 <img
-                  src="./logo.svg"
+                  src="/logo.svg"
                   alt="TechShelf"
                   className="h-auto w-30"
                 />

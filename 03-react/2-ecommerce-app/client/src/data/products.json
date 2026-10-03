@@ -7,14 +7,86 @@
     "brand": "canon",
     "price": 899,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": true,
     "badge": "New",
     "images": [
       "/images/products/cameras/canon-eos/01.webp",
       "/images/products/cameras/canon-eos/02.webp",
       "/images/products/cameras/canon-eos/03.webp"
+    ],
+    "sku": "TS-CANON-EOS-001",
+    "rating": 4.6,
+    "reviewCount": 128,
+    "stockQuantity": 14,
+    "description": "A versatile Canon EOS camera designed for everyday photography and creative shooting.",
+    "shortDescription": "Versatile camera for photography and everyday creative shooting.",
+    "variants": {
+      "configuration": [
+        "Body Only",
+        "Standard Kit"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Camera Type",
+        "value": "Digital Camera"
+      },
+      {
+        "label": "Sensor",
+        "value": "APS-C"
+      },
+      {
+        "label": "Video",
+        "value": "4K UHD"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth"
+      },
+      {
+        "label": "Display",
+        "value": "3.0-inch LCD"
+      },
+      {
+        "label": "Storage",
+        "value": "SD Card"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 14,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Body Only",
+          "Standard Kit"
+        ]
+      }
     ]
   },
   {
@@ -25,13 +97,79 @@
     "brand": "nikon",
     "price": 999,
     "availability": "in-stock",
-    "colors": ["black"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/cameras/nikon-z5/01.webp",
       "/images/products/cameras/nikon-z5/02.webp",
       "/images/products/cameras/nikon-z5/03.webp"
+    ],
+    "sku": "TS-NIKON-Z5-002",
+    "rating": 4.5,
+    "reviewCount": 96,
+    "stockQuantity": 9,
+    "description": "A reliable Nikon camera built for detailed still photography and flexible everyday shooting.",
+    "shortDescription": "Reliable camera for detailed still photography.",
+    "variants": {
+      "configuration": [
+        "Body Only",
+        "Standard Kit"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Camera Type",
+        "value": "Mirrorless Camera"
+      },
+      {
+        "label": "Sensor",
+        "value": "Full Frame"
+      },
+      {
+        "label": "Video",
+        "value": "4K UHD"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth"
+      },
+      {
+        "label": "Display",
+        "value": "3.2-inch LCD"
+      },
+      {
+        "label": "Storage",
+        "value": "SD Card"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 9,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Body Only",
+          "Standard Kit"
+        ]
+      }
     ]
   },
   {
@@ -42,13 +180,79 @@
     "brand": "nikon",
     "price": 1999,
     "availability": "out-of-stock",
-    "colors": ["black"],
-    "sizes": ["L", "XL"],
+    "colors": [
+      "black"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "featured": false,
     "images": [
       "/images/products/cameras/nikon-z6/01.webp",
       "/images/products/cameras/nikon-z6/02.webp",
       "/images/products/cameras/nikon-z6/03.webp"
+    ],
+    "sku": "TS-NIKON-Z6-003",
+    "rating": 4.7,
+    "reviewCount": 84,
+    "stockQuantity": 0,
+    "description": "A high-performance Nikon mirrorless camera suited to demanding photography and video workflows.",
+    "shortDescription": "High-performance mirrorless camera for photo and video.",
+    "variants": {
+      "configuration": [
+        "Body Only",
+        "Standard Kit"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Camera Type",
+        "value": "Mirrorless Camera"
+      },
+      {
+        "label": "Sensor",
+        "value": "Full Frame"
+      },
+      {
+        "label": "Video",
+        "value": "4K UHD"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth"
+      },
+      {
+        "label": "Display",
+        "value": "3.2-inch LCD"
+      },
+      {
+        "label": "Storage",
+        "value": "SD Card"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Body Only",
+          "Standard Kit"
+        ]
+      }
     ]
   },
   {
@@ -59,13 +263,85 @@
     "brand": "sony",
     "price": 1499,
     "availability": "in-stock",
-    "colors": ["black", "red"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/cameras/sony-cyber/01.webp",
       "/images/products/cameras/sony-cyber/02.webp",
       "/images/products/cameras/sony-cyber/03.webp"
+    ],
+    "sku": "TS-SONY-CYBER-004",
+    "rating": 4.4,
+    "reviewCount": 73,
+    "stockQuantity": 11,
+    "description": "A compact Sony camera focused on convenient everyday photography with flexible shooting options.",
+    "shortDescription": "Compact camera for convenient everyday photography.",
+    "variants": {
+      "configuration": [
+        "Camera Only",
+        "Travel Kit"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Camera Type",
+        "value": "Digital Camera"
+      },
+      {
+        "label": "Sensor",
+        "value": "High Resolution Sensor"
+      },
+      {
+        "label": "Video",
+        "value": "4K UHD"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth"
+      },
+      {
+        "label": "Display",
+        "value": "LCD Display"
+      },
+      {
+        "label": "Storage",
+        "value": "SD Card"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 11,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Camera Only",
+          "Travel Kit"
+        ]
+      }
     ]
   },
   {
@@ -76,8 +352,14 @@
     "brand": "dell",
     "price": 799,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "badge": "15% OFF",
     "featured": true,
     "images": [
@@ -85,6 +367,76 @@
       "/images/products/laptops/dell-15/02.webp",
       "/images/products/laptops/dell-15/03.webp",
       "/images/products/laptops/dell-15/04.webp"
+    ],
+    "sku": "TS-DELL-15-005",
+    "rating": 4.5,
+    "reviewCount": 112,
+    "stockQuantity": 18,
+    "description": "A practical Dell laptop for everyday productivity, browsing, study, and office workloads.",
+    "shortDescription": "Everyday laptop for work, study, and productivity.",
+    "variants": {
+      "configuration": [
+        "8 GB / 256 GB",
+        "16 GB / 512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "15.6-inch FHD"
+      },
+      {
+        "label": "Processor",
+        "value": "Intel Core Series"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB / 16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB / 512 GB SSD"
+      },
+      {
+        "label": "Graphics",
+        "value": "Integrated Graphics"
+      },
+      {
+        "label": "Operating System",
+        "value": "Windows"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth, USB"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 18,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "8 GB / 256 GB",
+          "16 GB / 512 GB"
+        ]
+      }
     ]
   },
   {
@@ -95,14 +447,89 @@
     "brand": "hp",
     "price": 899,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["L"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/laptops/hp-elitebook-640/01.webp",
       "/images/products/laptops/hp-elitebook-640/02.webp",
       "/images/products/laptops/hp-elitebook-640/03.webp",
       "/images/products/laptops/hp-elitebook-640/04.webp"
+    ],
+    "sku": "TS-HP-ELITE-006",
+    "rating": 4.6,
+    "reviewCount": 91,
+    "stockQuantity": 7,
+    "description": "A business-focused HP laptop designed for professional productivity and everyday office work.",
+    "shortDescription": "Business laptop for professional productivity.",
+    "variants": {
+      "configuration": [
+        "8 GB / 256 GB",
+        "16 GB / 512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "14-inch FHD"
+      },
+      {
+        "label": "Processor",
+        "value": "Intel Core Series"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB / 16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB / 512 GB SSD"
+      },
+      {
+        "label": "Graphics",
+        "value": "Integrated Graphics"
+      },
+      {
+        "label": "Operating System",
+        "value": "Windows"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth, USB"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 7,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "8 GB / 256 GB",
+          "16 GB / 512 GB"
+        ]
+      }
     ]
   },
   {
@@ -113,13 +540,89 @@
     "brand": "lenovo",
     "price": 699,
     "availability": "in-stock",
-    "colors": ["black", "blue"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "blue"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/laptops/lenovo-ideapad/01.webp",
       "/images/products/laptops/lenovo-ideapad/02.webp",
       "/images/products/laptops/lenovo-ideapad/03.webp"
+    ],
+    "sku": "TS-LENOVO-IDP-007",
+    "rating": 4.4,
+    "reviewCount": 67,
+    "stockQuantity": 13,
+    "description": "A balanced Lenovo IdeaPad for everyday computing, learning, office work, and entertainment.",
+    "shortDescription": "Balanced everyday laptop for work and entertainment.",
+    "variants": {
+      "configuration": [
+        "8 GB / 256 GB",
+        "16 GB / 512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "15.6-inch FHD"
+      },
+      {
+        "label": "Processor",
+        "value": "Intel Core Series"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB / 16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB / 512 GB SSD"
+      },
+      {
+        "label": "Graphics",
+        "value": "Integrated Graphics"
+      },
+      {
+        "label": "Operating System",
+        "value": "Windows"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth, USB"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 13,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "8 GB / 256 GB",
+          "16 GB / 512 GB"
+        ]
+      }
     ]
   },
   {
@@ -130,13 +633,82 @@
     "brand": "lenovo",
     "price": 749,
     "availability": "out-of-stock",
-    "colors": ["black"],
-    "sizes": ["L"],
+    "colors": [
+      "black"
+    ],
+    "sizes": [
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/laptops/lenovo-v15/01.webp",
       "/images/products/laptops/lenovo-v15/02.webp",
       "/images/products/laptops/lenovo-v15/03.webp"
+    ],
+    "sku": "TS-LENOVO-V15-008",
+    "rating": 4.3,
+    "reviewCount": 52,
+    "stockQuantity": 0,
+    "description": "A practical Lenovo laptop offering dependable performance for everyday office and home computing.",
+    "shortDescription": "Practical laptop for everyday computing.",
+    "variants": {
+      "configuration": [
+        "8 GB / 256 GB",
+        "16 GB / 512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "15.6-inch FHD"
+      },
+      {
+        "label": "Processor",
+        "value": "Intel Core Series"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB / 16 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "256 GB / 512 GB SSD"
+      },
+      {
+        "label": "Graphics",
+        "value": "Integrated Graphics"
+      },
+      {
+        "label": "Operating System",
+        "value": "Windows"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, Bluetooth, USB"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "8 GB / 256 GB",
+          "16 GB / 512 GB"
+        ]
+      }
     ]
   },
   {
@@ -147,14 +719,94 @@
     "brand": "infinix",
     "price": 199,
     "availability": "in-stock",
-    "colors": ["black", "blue"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "blue"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "badge": "Best Seller",
     "featured": true,
     "images": [
       "/images/products/phones/infinix-smart-20/01.webp",
       "/images/products/phones/infinix-smart-20/02.webp",
       "/images/products/phones/infinix-smart-20/03.webp"
+    ],
+    "sku": "TS-INFINIX-S20-009",
+    "rating": 4.4,
+    "reviewCount": 186,
+    "stockQuantity": 22,
+    "description": "A value-focused smartphone designed for everyday communication, entertainment, and mobile use.",
+    "shortDescription": "Affordable smartphone for everyday mobile use.",
+    "variants": {
+      "storage": [
+        "64 GB",
+        "128 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "6.7-inch HD+"
+      },
+      {
+        "label": "Processor",
+        "value": "Octa-Core"
+      },
+      {
+        "label": "RAM",
+        "value": "4 GB / 8 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "64 GB / 128 GB"
+      },
+      {
+        "label": "Rear Camera",
+        "value": "50 MP Main Camera"
+      },
+      {
+        "label": "Front Camera",
+        "value": "8 MP"
+      },
+      {
+        "label": "Battery",
+        "value": "5000 mAh"
+      },
+      {
+        "label": "Operating System",
+        "value": "Android"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 22,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "storage",
+        "values": [
+          "64 GB",
+          "128 GB"
+        ]
+      }
     ]
   },
   {
@@ -166,14 +818,116 @@
     "price": 799,
     "originalPrice": 999,
     "availability": "in-stock",
-    "colors": ["black", "white", "blue", "red"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "white",
+      "blue",
+      "red"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "featured": false,
     "badge": "15% OFF",
     "images": [
       "/images/products/phones/iphone-16/01.webp",
       "/images/products/phones/iphone-16/02.webp",
       "/images/products/phones/iphone-16/03.webp"
+    ],
+    "rating": 4.5,
+    "reviewCount": 342,
+    "description": "iPhone 16 with the A16 Bionic chip. Superfast 5G. A ceramic shield front cover. And a brighter Super Retina XDR display.",
+    "variants": {
+      "storage": [
+        "128 GB",
+        "256 GB",
+        "512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "6.1-inch Super Retina XDR OLED"
+      },
+      {
+        "label": "Processor",
+        "value": "A17 Pro Chip"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "128 GB / 256 GB / 512 GB"
+      },
+      {
+        "label": "Rear Camera",
+        "value": "48 MP Main + 12 MP Ultra Wide + 12 MP Telephoto"
+      },
+      {
+        "label": "Front Camera",
+        "value": "12 MP TrueDepth"
+      },
+      {
+        "label": "Battery",
+        "value": "3,274 mAh"
+      },
+      {
+        "label": "Operating System",
+        "value": "iOS 17"
+      },
+      {
+        "label": "Connectivity",
+        "value": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC"
+      },
+      {
+        "label": "Weight",
+        "value": "187 g"
+      }
+    ],
+    "sku": "TS-IPHONE-16-010",
+    "stockQuantity": 20,
+    "shortDescription": "Premium smartphone with a bright Super Retina XDR display.",
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 20,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "storage",
+        "values": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ]
+      }
     ]
   },
   {
@@ -184,13 +938,105 @@
     "brand": "samsung",
     "price": 899,
     "availability": "in-stock",
-    "colors": ["black", "white", "blue"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "white",
+      "blue"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "featured": false,
     "images": [
       "/images/products/phones/samsung-galaxy-s26/01.webp",
       "/images/products/phones/samsung-galaxy-s26/02.webp",
       "/images/products/phones/samsung-galaxy-s26/03.webp"
+    ],
+    "sku": "TS-SAMSUNG-S26-011",
+    "rating": 4.6,
+    "reviewCount": 214,
+    "stockQuantity": 16,
+    "description": "A modern Samsung smartphone built for everyday performance, photography, communication, and entertainment.",
+    "shortDescription": "Modern smartphone for performance and everyday entertainment.",
+    "variants": {
+      "storage": [
+        "128 GB",
+        "256 GB",
+        "512 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "6.7-inch AMOLED"
+      },
+      {
+        "label": "Processor",
+        "value": "Octa-Core"
+      },
+      {
+        "label": "RAM",
+        "value": "8 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "128 GB / 256 GB / 512 GB"
+      },
+      {
+        "label": "Rear Camera",
+        "value": "50 MP Main + Ultra Wide"
+      },
+      {
+        "label": "Front Camera",
+        "value": "12 MP"
+      },
+      {
+        "label": "Battery",
+        "value": "5000 mAh"
+      },
+      {
+        "label": "Operating System",
+        "value": "Android"
+      },
+      {
+        "label": "Connectivity",
+        "value": "5G, Wi-Fi, Bluetooth, NFC"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 16,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "storage",
+        "values": [
+          "128 GB",
+          "256 GB",
+          "512 GB"
+        ]
+      }
     ]
   },
   {
@@ -201,14 +1047,94 @@
     "brand": "sego",
     "price": 249,
     "availability": "out-of-stock",
-    "colors": ["black", "red"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "badge": "Best Choice",
     "featured": true,
     "images": [
       "/images/products/phones/sego/01.webp",
       "/images/products/phones/sego/02.webp",
       "/images/products/phones/sego/03.webp"
+    ],
+    "sku": "TS-SEGO-012",
+    "rating": 4.2,
+    "reviewCount": 58,
+    "stockQuantity": 0,
+    "description": "A budget-friendly smartphone with practical features for everyday communication and entertainment.",
+    "shortDescription": "Budget-friendly smartphone for everyday use.",
+    "variants": {
+      "storage": [
+        "64 GB",
+        "128 GB"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "6.5-inch HD+"
+      },
+      {
+        "label": "Processor",
+        "value": "Octa-Core"
+      },
+      {
+        "label": "RAM",
+        "value": "4 GB"
+      },
+      {
+        "label": "Storage",
+        "value": "64 GB / 128 GB"
+      },
+      {
+        "label": "Rear Camera",
+        "value": "Main Dual Camera"
+      },
+      {
+        "label": "Front Camera",
+        "value": "8 MP"
+      },
+      {
+        "label": "Battery",
+        "value": "5000 mAh"
+      },
+      {
+        "label": "Operating System",
+        "value": "Android"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "storage",
+        "values": [
+          "64 GB",
+          "128 GB"
+        ]
+      }
     ]
   },
   {
@@ -219,8 +1145,14 @@
     "brand": "audionic",
     "price": 129,
     "availability": "in-stock",
-    "colors": ["black", "red"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "badge": "New",
     "featured": true,
     "images": [
@@ -228,6 +1160,68 @@
       "/images/products/sound-boxes/audionic-pace-8/02.webp",
       "/images/products/sound-boxes/audionic-pace-8/03.webp",
       "/images/products/sound-boxes/audionic-pace-8/04.webp"
+    ],
+    "sku": "TS-AUD-PACE8-013",
+    "rating": 4.5,
+    "reviewCount": 104,
+    "stockQuantity": 25,
+    "description": "A powerful home audio speaker designed for music, entertainment, and casual gatherings.",
+    "shortDescription": "Powerful speaker for music and entertainment.",
+    "variants": {
+      "configuration": [
+        "Standard",
+        "Speaker + Mic"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Speaker Type",
+        "value": "Portable Bluetooth Speaker"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth, USB, AUX"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Lighting",
+        "value": "LED Party Lighting"
+      },
+      {
+        "label": "Controls",
+        "value": "On-device Controls"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 25,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Standard",
+          "Speaker + Mic"
+        ]
+      }
     ]
   },
   {
@@ -238,13 +1232,79 @@
     "brand": "bluks",
     "price": 149,
     "availability": "in-stock",
-    "colors": ["black", "blue"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "blue"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "featured": false,
     "images": [
       "/images/products/sound-boxes/bluks-bx-192/01.webp",
       "/images/products/sound-boxes/bluks-bx-192/02.webp",
       "/images/products/sound-boxes/bluks-bx-192/03.webp"
+    ],
+    "sku": "TS-BLUKS-B192-014",
+    "rating": 4.3,
+    "reviewCount": 71,
+    "stockQuantity": 18,
+    "description": "A compact Bluetooth speaker designed for portable everyday listening with a simple setup.",
+    "shortDescription": "Compact Bluetooth speaker for portable listening.",
+    "variants": {
+      "configuration": [
+        "Standard"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Speaker Type",
+        "value": "Portable Bluetooth Speaker"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth, USB, AUX"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Lighting",
+        "value": "LED Lighting"
+      },
+      {
+        "label": "Controls",
+        "value": "On-device Controls"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 18,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Standard"
+        ]
+      }
     ]
   },
   {
@@ -255,14 +1315,80 @@
     "brand": "bluks",
     "price": 159,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "badge": "Best Choice",
     "featured": true,
     "images": [
       "/images/products/sound-boxes/bluks-bx-193/01.webp",
       "/images/products/sound-boxes/bluks-bx-193/02.webp",
       "/images/products/sound-boxes/bluks-bx-193/03.webp"
+    ],
+    "sku": "TS-BLUKS-B193-015",
+    "rating": 4.4,
+    "reviewCount": 83,
+    "stockQuantity": 12,
+    "description": "A stylish portable speaker offering convenient wireless listening for home and outdoor use.",
+    "shortDescription": "Stylish portable speaker for wireless listening.",
+    "variants": {
+      "configuration": [
+        "Standard"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Speaker Type",
+        "value": "Portable Bluetooth Speaker"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth, USB, AUX"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Lighting",
+        "value": "LED Lighting"
+      },
+      {
+        "label": "Controls",
+        "value": "On-device Controls"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 12,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Standard"
+        ]
+      }
     ]
   },
   {
@@ -273,12 +1399,78 @@
     "brand": "zero",
     "price": 179,
     "availability": "out-of-stock",
-    "colors": ["black", "red"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/sound-boxes/zero-thunder/01.webp",
       "/images/products/sound-boxes/zero-thunder/02.webp"
+    ],
+    "sku": "TS-ZERO-THUNDER-016",
+    "rating": 4.2,
+    "reviewCount": 49,
+    "stockQuantity": 0,
+    "description": "A home entertainment speaker system designed for immersive everyday audio and media playback.",
+    "shortDescription": "Home audio system for everyday entertainment.",
+    "variants": {
+      "configuration": [
+        "Standard"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Speaker Type",
+        "value": "Home Speaker System"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth, USB, AUX"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable / AC Power"
+      },
+      {
+        "label": "Lighting",
+        "value": "LED Lighting"
+      },
+      {
+        "label": "Controls",
+        "value": "Remote and On-device Controls"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "configuration",
+        "values": [
+          "Standard"
+        ]
+      }
     ]
   },
   {
@@ -289,14 +1481,86 @@
     "brand": "ecostar",
     "price": 499,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["L", "XL"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "badge": "Best Seller",
     "featured": true,
     "images": [
       "/images/products/tv/ecostar/01.webp",
       "/images/products/tv/ecostar/02.webp",
       "/images/products/tv/ecostar/03.webp"
+    ],
+    "sku": "TS-ECOSTAR-017",
+    "rating": 4.4,
+    "reviewCount": 137,
+    "stockQuantity": 8,
+    "description": "A large-screen smart TV designed for streaming, movies, sports, and everyday home entertainment.",
+    "shortDescription": "Large-screen TV for streaming and home entertainment.",
+    "variants": {
+      "screenSize": [
+        "43 inch",
+        "50 inch"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "4K UHD LED"
+      },
+      {
+        "label": "Screen Size",
+        "value": "43 / 50 inch"
+      },
+      {
+        "label": "Smart Platform",
+        "value": "Smart TV"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, HDMI, USB"
+      },
+      {
+        "label": "Audio",
+        "value": "Built-in Stereo Speakers"
+      },
+      {
+        "label": "Resolution",
+        "value": "3840 × 2160"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 8,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "screenSize",
+        "values": [
+          "43 inch",
+          "50 inch"
+        ]
+      }
     ]
   },
   {
@@ -307,13 +1571,76 @@
     "brand": "sony",
     "price": 599,
     "availability": "in-stock",
-    "colors": ["black"],
-    "sizes": ["L"],
+    "colors": [
+      "black"
+    ],
+    "sizes": [
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/tv/sony-40/01.webp",
       "/images/products/tv/sony-40/02.webp",
       "/images/products/tv/sony-40/03.webp"
+    ],
+    "sku": "TS-SONY-40-018",
+    "rating": 4.6,
+    "reviewCount": 119,
+    "stockQuantity": 10,
+    "description": "A compact Sony TV designed for clear everyday viewing in bedrooms, offices, and smaller living spaces.",
+    "shortDescription": "Compact TV for everyday viewing.",
+    "variants": {
+      "screenSize": [
+        "40 inch"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "Full HD LED"
+      },
+      {
+        "label": "Screen Size",
+        "value": "40 inch"
+      },
+      {
+        "label": "Smart Platform",
+        "value": "Smart TV"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, HDMI, USB"
+      },
+      {
+        "label": "Audio",
+        "value": "Built-in Stereo Speakers"
+      },
+      {
+        "label": "Resolution",
+        "value": "1920 × 1080"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 10,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "screenSize",
+        "values": [
+          "40 inch"
+        ]
+      }
     ]
   },
   {
@@ -324,13 +1651,76 @@
     "brand": "sony",
     "price": 799,
     "availability": "out-of-stock",
-    "colors": ["black"],
-    "sizes": ["XL"],
+    "colors": [
+      "black"
+    ],
+    "sizes": [
+      "XL"
+    ],
     "featured": false,
     "images": [
       "/images/products/tv/sony-55/01.webp",
       "/images/products/tv/sony-55/02.webp",
       "/images/products/tv/sony-55/03.webp"
+    ],
+    "sku": "TS-SONY-55-019",
+    "rating": 4.5,
+    "reviewCount": 92,
+    "stockQuantity": 0,
+    "description": "A large Sony TV built for immersive movie, sports, gaming, and streaming experiences.",
+    "shortDescription": "Large-screen TV for immersive entertainment.",
+    "variants": {
+      "screenSize": [
+        "55 inch"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "4K UHD LED"
+      },
+      {
+        "label": "Screen Size",
+        "value": "55 inch"
+      },
+      {
+        "label": "Smart Platform",
+        "value": "Smart TV"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, HDMI, USB"
+      },
+      {
+        "label": "Audio",
+        "value": "Built-in Stereo Speakers"
+      },
+      {
+        "label": "Resolution",
+        "value": "3840 × 2160"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "screenSize",
+        "values": [
+          "55 inch"
+        ]
+      }
     ]
   },
   {
@@ -341,13 +1731,82 @@
     "brand": "tcl",
     "price": 699,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["XL"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "XL"
+    ],
     "featured": false,
     "images": [
       "/images/products/tv/tcl-55/01.webp",
       "/images/products/tv/tcl-55/02.webp",
       "/images/products/tv/tcl-55/03.webp"
+    ],
+    "sku": "TS-TCL-55-020",
+    "rating": 4.4,
+    "reviewCount": 88,
+    "stockQuantity": 11,
+    "description": "A 55-inch TCL TV designed for modern home entertainment with a large, detailed display.",
+    "shortDescription": "55-inch TV for modern home entertainment.",
+    "variants": {
+      "screenSize": [
+        "55 inch"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "4K UHD LED"
+      },
+      {
+        "label": "Screen Size",
+        "value": "55 inch"
+      },
+      {
+        "label": "Smart Platform",
+        "value": "Smart TV"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Wi-Fi, HDMI, USB"
+      },
+      {
+        "label": "Audio",
+        "value": "Built-in Stereo Speakers"
+      },
+      {
+        "label": "Resolution",
+        "value": "3840 × 2160"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 11,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "screenSize",
+        "values": [
+          "55 inch"
+        ]
+      }
     ]
   },
   {
@@ -358,8 +1817,14 @@
     "brand": "kieslect",
     "price": 129,
     "availability": "in-stock",
-    "colors": ["black", "white"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "badge": "New",
     "featured": true,
     "images": [
@@ -367,6 +1832,72 @@
       "/images/products/watches/kieslect-watch/02.webp",
       "/images/products/watches/kieslect-watch/03.webp",
       "/images/products/watches/kieslect-watch/04.webp"
+    ],
+    "sku": "TS-KIESLECT-W21-021",
+    "rating": 4.5,
+    "reviewCount": 76,
+    "stockQuantity": 19,
+    "description": "A stylish smartwatch designed to keep track of everyday activity, notifications, and essential wellness metrics.",
+    "shortDescription": "Stylish smartwatch for everyday activity and notifications.",
+    "variants": {
+      "strapSize": [
+        "Small",
+        "Medium"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "AMOLED Touch Display"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Health Features",
+        "value": "Activity and Heart Rate Tracking"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Compatibility",
+        "value": "Android and iOS"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Everyday Water Resistance"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 19,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "strapSize",
+        "values": [
+          "Small",
+          "Medium"
+        ]
+      }
     ]
   },
   {
@@ -377,14 +1908,86 @@
     "brand": "prism",
     "price": 99,
     "availability": "in-stock",
-    "colors": ["black", "blue"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "blue"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "featured": false,
     "images": [
       "/images/products/watches/prism-smart-watch/01.webp",
       "/images/products/watches/prism-smart-watch/02.webp",
       "/images/products/watches/prism-smart-watch/03.webp",
       "/images/products/watches/prism-smart-watch/04.webp"
+    ],
+    "sku": "TS-PRISM-SW22-022",
+    "rating": 4.2,
+    "reviewCount": 61,
+    "stockQuantity": 15,
+    "description": "A practical smart watch with essential activity, notification, and everyday companion features.",
+    "shortDescription": "Practical smartwatch for everyday use.",
+    "variants": {
+      "strapSize": [
+        "Small",
+        "Medium"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "Touch Display"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Health Features",
+        "value": "Activity and Heart Rate Tracking"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Compatibility",
+        "value": "Android and iOS"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Everyday Water Resistance"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Blue",
+        "value": "#2563EB",
+        "slug": "blue"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 15,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "strapSize",
+        "values": [
+          "Small",
+          "Medium"
+        ]
+      }
     ]
   },
   {
@@ -395,14 +1998,86 @@
     "brand": "samsung",
     "price": 299,
     "availability": "out-of-stock",
-    "colors": ["black", "white"],
-    "sizes": ["M", "L"],
+    "colors": [
+      "black",
+      "white"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "featured": false,
     "images": [
       "/images/products/watches/samsung-smart-watch8/01.webp",
       "/images/products/watches/samsung-smart-watch8/02.webp",
       "/images/products/watches/samsung-smart-watch8/03.webp",
       "/images/products/watches/samsung-smart-watch8/04.webp"
+    ],
+    "sku": "TS-SAMSUNG-W8-023",
+    "rating": 4.6,
+    "reviewCount": 101,
+    "stockQuantity": 0,
+    "description": "A Samsung smartwatch designed for connected everyday life, activity tracking, and convenient notifications.",
+    "shortDescription": "Connected smartwatch for activity and notifications.",
+    "variants": {
+      "strapSize": [
+        "Medium",
+        "Large"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "AMOLED Touch Display"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth, Wi-Fi"
+      },
+      {
+        "label": "Health Features",
+        "value": "Activity and Heart Rate Tracking"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Compatibility",
+        "value": "Android"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Everyday Water Resistance"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "White",
+        "value": "#F5F5F5",
+        "slug": "white"
+      }
+    ],
+    "inventory": {
+      "status": "out-of-stock",
+      "quantity": 0,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "strapSize",
+        "values": [
+          "Medium",
+          "Large"
+        ]
+      }
     ]
   },
   {
@@ -413,14 +2088,86 @@
     "brand": "zero",
     "price": 89,
     "availability": "in-stock",
-    "colors": ["black", "red"],
-    "sizes": ["S", "M"],
+    "colors": [
+      "black",
+      "red"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "featured": false,
     "images": [
       "/images/products/watches/zero-luna-watch/01.webp",
       "/images/products/watches/zero-luna-watch/02.webp",
       "/images/products/watches/zero-luna-watch/03.webp",
       "/images/products/watches/zero-luna-watch/04.webp"
+    ],
+    "sku": "TS-ZERO-LUNA-024",
+    "rating": 4.1,
+    "reviewCount": 44,
+    "stockQuantity": 17,
+    "description": "A lightweight smartwatch designed for everyday notifications, activity tracking, and casual use.",
+    "shortDescription": "Lightweight smartwatch for everyday use.",
+    "variants": {
+      "strapSize": [
+        "Small",
+        "Medium"
+      ]
+    },
+    "specifications": [
+      {
+        "label": "Display",
+        "value": "Touch Display"
+      },
+      {
+        "label": "Connectivity",
+        "value": "Bluetooth"
+      },
+      {
+        "label": "Health Features",
+        "value": "Activity and Heart Rate Tracking"
+      },
+      {
+        "label": "Battery",
+        "value": "Rechargeable Battery"
+      },
+      {
+        "label": "Compatibility",
+        "value": "Android and iOS"
+      },
+      {
+        "label": "Water Resistance",
+        "value": "Everyday Water Resistance"
+      }
+    ],
+    "colorOptions": [
+      {
+        "name": "Black",
+        "value": "#111111",
+        "slug": "black"
+      },
+      {
+        "name": "Red",
+        "value": "#EF4444",
+        "slug": "red"
+      }
+    ],
+    "inventory": {
+      "status": "in-stock",
+      "quantity": 17,
+      "trackQuantity": true
+    },
+    "status": "active",
+    "currency": "USD",
+    "variantOptions": [
+      {
+        "type": "strapSize",
+        "values": [
+          "Small",
+          "Medium"
+        ]
+      }
     ]
   }
 ]

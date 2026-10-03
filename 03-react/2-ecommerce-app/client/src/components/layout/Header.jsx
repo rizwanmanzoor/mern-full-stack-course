@@ -201,7 +201,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link to="/" aria-label="TechShelf Home">
                 <img
-                  src="./logo.svg"
+                  src="/logo.svg"
                   alt="TechShelf"
                   className="h-8 w-auto sm:h-7.5"
                 />
@@ -375,7 +375,7 @@ export default function Header() {
             {/* Logo */}
 
             <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-              <img src="./logo.svg" alt="TechShelf" className="h-9 w-auto" />
+              <img src="/logo.svg" alt="TechShelf" className="h-9 w-auto" />
             </Link>
 
             {/* Mobile actions */}
