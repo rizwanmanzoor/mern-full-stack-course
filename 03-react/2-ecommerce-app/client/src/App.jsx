@@ -1,13 +1,14 @@
 import { Analytics } from "@vercel/analytics/react";
 
-import { CartProvider } from "@/context/CartProvider";
 import { useCart } from "@/context/useCart";
+import { CartProvider } from "@/context/CartProvider";
+import { AuthProvider } from "@/context/auth/AuthProvider";
 
 import AppRoutes from "@/routes/AppRoutes";
 import MainLayout from "@/layouts/MainLayout";
 
-import CartDrawer from "@/components/cart/CartDrawer";
 import CartItem from "@/components/cart/CartItem";
+import CartDrawer from "@/components/cart/CartDrawer";
 
 function CartUI() {
   const {
@@ -46,13 +47,15 @@ function CartUI() {
 export default function App() {
   return (
     <>
-      <CartProvider>
-        <MainLayout>
-          <AppRoutes />
-        </MainLayout>
+      <AuthProvider>
+        <CartProvider>
+          <MainLayout>
+            <AppRoutes />
+          </MainLayout>
 
-        <CartUI />
-      </CartProvider>
+          <CartUI />
+        </CartProvider>
+      </AuthProvider>
 
       <Analytics />
     </>

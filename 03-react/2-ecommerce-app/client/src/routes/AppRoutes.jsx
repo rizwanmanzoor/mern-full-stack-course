@@ -5,7 +5,12 @@ import Shop from "@/pages/Shop";
 import ProductDetail from "@/pages/ProductDetail";
 import Checkout from "@/pages/Checkout";
 import OrderSuccess from "@/pages/OrderSuccess";
+import Register from "@/pages/Register";
+import Login from "@/pages/Login";
 import NotFound from "@/pages/NotFound";
+import ProtectedRoute from "@/routes/ProtectedRoute";
+import Orders from "@/pages/Orders";
+import OrderDetails from "@/pages/OrderDetails";
 
 export default function AppRoutes() {
   return (
@@ -13,8 +18,45 @@ export default function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/order-success/:orderNumber" element={<OrderSuccess />} />
+
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute>
+            <Checkout />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/order-success/:orderNumber"
+        element={
+          <ProtectedRoute>
+            <OrderSuccess />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/orders"
+        element={
+          <ProtectedRoute>
+            <Orders />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/orders/:orderNumber"
+        element={
+          <ProtectedRoute>
+            <OrderDetails />
+          </ProtectedRoute>
+        }
+      />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

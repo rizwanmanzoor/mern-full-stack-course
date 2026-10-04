@@ -8,6 +8,7 @@ import DeliveryOptions from "@/components/checkout/DeliveryOptions";
 import CustomerInformation from "@/components/checkout/CustomerInformation";
 
 import { useCart } from "@/context/useCart";
+import { useAuth } from "@/context/auth/useAuth";
 import { saveOrder } from "@/utils/orderStorage";
 
 import { deliveryOptions } from "@/data/deliveryOptions";
@@ -15,6 +16,8 @@ import { initialFormData } from "@/data/checkoutFormData";
 
 export default function Checkout() {
   const { cartItems, itemCount, subtotal, clearCart } = useCart();
+
+  const { user } = useAuth();
 
   const navigate = useNavigate();
 
@@ -75,6 +78,7 @@ export default function Checkout() {
     }
 
     const order = createOrder({
+      userId: user.id,
       formData,
       cartItems,
       delivery,
