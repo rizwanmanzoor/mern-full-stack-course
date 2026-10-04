@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import {
+  Link,
+  NavLink,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import {
   ChevronDown,
   Globe,
@@ -24,6 +30,12 @@ export default function Header() {
   const { user, isAuthenticated, logout } = useAuth();
 
   const navigate = useNavigate();
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+
+  const [searchQuery, setSearchQuery] = useState(
+    searchParams.get("q") ?? "",
+  );
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -39,11 +51,52 @@ export default function Header() {
     flag: "https://flagcdn.com/w40/us.png",
   });
 
+  /*
+   * Search
+   */
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+
+    const query = searchQuery.trim();
+
+    if (!query) {
+      return;
+    }
+
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+    closeMobileMenu();
+  };
+
+  /*
+   * Clear search
+   *
+   * Clears both:
+   * 1. Input
+   * 2. URL
+   */
+  const handleSearchClear = () => {
+    setSearchQuery("");
+
+    if (location.pathname === "/search") {
+      navigate("/shop", { replace: true });
+      return;
+    }
+
+    // If search text is being typed on another page,
+    // simply clear the input.
+  };
+
+  /*
+   * Mobile menu
+   */
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
     setMobileProductsOpen(false);
   };
 
+  /*
+   * Logout
+   */
   const handleLogout = () => {
     logout();
 
@@ -53,6 +106,9 @@ export default function Header() {
     navigate("/", { replace: true });
   };
 
+  /*
+   * Cart
+   */
   const handleCartOpen = () => {
     closeMobileMenu();
     openCart();
@@ -256,7 +312,7 @@ export default function Header() {
               <Menu />
             </button>
 
-            {/* Logo + Search */}
+            {/* Logo + Desktop Search */}
             <div className="flex items-center">
               <Link to="/" aria-label="TechShelf Home">
                 <img
@@ -267,16 +323,25 @@ export default function Header() {
               </Link>
 
               {/* Desktop Search */}
-              <div className="relative ml-6 hidden lg:block">
+              <form
+                onSubmit={handleSearchSubmit}
+                className="relative ml-6 hidden lg:block"
+              >
                 <input
                   type="search"
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
                   placeholder="Search products.."
                   className="
-                    h-11 w-87.5
+                    h-11
+                    w-87.5
                     rounded-radius
                     border border-gray-300
-                    px-4 pl-10
-                    text-base text-gray-800
+                    px-4
+                    pl-10
+                    pr-10
+                    text-base
+                    text-gray-800
                     placeholder:text-gray-400
                     outline-none
                     transition
@@ -286,10 +351,27 @@ export default function Header() {
                   "
                 />
 
-                <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+                {/* Search */}
+                <button
+                  type="submit"
+                  aria-label="Search products"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+                >
                   <Search size={20} />
-                </span>
-              </div>
+                </button>
+
+                {/* Clear */}
+                {searchQuery && (
+                  <button
+                    type="button"
+                    onClick={handleSearchClear}
+                    aria-label="Clear search"
+                    className="absolute right-2 top-1/2 flex size-8 -translate-y-1/2 items-center justify-center rounded-full text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-700"
+                  >
+                    <X size={17} />
+                  </button>
+                )}
+              </form>
             </div>
 
             {/* Desktop Navigation */}
@@ -317,9 +399,7 @@ export default function Header() {
                 >
                   Products
 
-                  <ChevronDown
-                    className="transition-transform duration-200 group-hover:rotate-180"
-                  />
+                  <ChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
                 </NavLink>
 
                 <div className="invisible absolute left-0 right-0 top-full z-50 bg-white opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
@@ -370,7 +450,79 @@ export default function Header() {
       </nav>
 
       {/* ==================================================
-          Mobile Menu
+          Mobile Search
+          IMPORTANT:
+          Search stays outside the mobile drawer.
+      =================================================== */}
+
+      <div className="border-b border-gray-100 bg-white lg:hidden">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6">
+          <form onSubmit={handleSearchSubmit} className="relative">
+            <input
+              type="search"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
+              placeholder="Search products.."
+              className="
+                h-11
+                w-full
+                rounded-lg
+                border border-gray-200
+                bg-white
+                px-4
+                pl-10
+                pr-10
+                text-sm
+                text-gray-900
+                placeholder:text-gray-400
+                outline-none
+                transition
+                focus:border-primary
+                focus:ring-4
+                focus:ring-primary/10
+              "
+            />
+
+            {/* Search Icon */}
+            <button
+              type="submit"
+              aria-label="Search products"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"
+            >
+              <Search size={19} />
+            </button>
+
+            {/* Clear Search */}
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={handleSearchClear}
+                aria-label="Clear search"
+                className="
+                  absolute
+                  right-2
+                  top-1/2
+                  flex
+                  size-8
+                  -translate-y-1/2
+                  items-center
+                  justify-center
+                  rounded-full
+                  text-gray-400
+                  transition-colors
+                  hover:bg-gray-100
+                  hover:text-gray-700
+                "
+              >
+                <X size={17} />
+              </button>
+            )}
+          </form>
+        </div>
+      </div>
+
+      {/* ==================================================
+          Mobile Menu Drawer
       =================================================== */}
 
       <div
@@ -393,7 +545,11 @@ export default function Header() {
 
             {/* Logo */}
             <Link to="/" onClick={closeMobileMenu}>
-              <img src="/logo.svg" alt="TechShelf" className="h-9 w-auto" />
+              <img
+                src="/logo.svg"
+                alt="TechShelf"
+                className="h-9 w-auto"
+              />
             </Link>
 
             {/* Mobile actions */}
@@ -448,7 +604,9 @@ export default function Header() {
             <div>
               <button
                 type="button"
-                onClick={() => setMobileProductsOpen((prev) => !prev)}
+                onClick={() =>
+                  setMobileProductsOpen((prev) => !prev)
+                }
                 className="flex w-full items-center justify-between py-3 text-left text-base font-medium text-gray-900"
               >
                 <span>Products</span>
@@ -471,16 +629,18 @@ export default function Header() {
                       Smart Devices
                     </p>
 
-                    {["Smartphones", "Laptops", "Tablets"].map((item) => (
-                      <Link
-                        key={item}
-                        to="/shop"
-                        onClick={closeMobileMenu}
-                        className="block py-1.5 text-sm text-gray-500"
-                      >
-                        {item}
-                      </Link>
-                    ))}
+                    {["Smartphones", "Laptops", "Tablets"].map(
+                      (item) => (
+                        <Link
+                          key={item}
+                          to="/shop"
+                          onClick={closeMobileMenu}
+                          className="block py-1.5 text-sm text-gray-500"
+                        >
+                          {item}
+                        </Link>
+                      ),
+                    )}
                   </div>
 
                   <div>
@@ -488,16 +648,18 @@ export default function Header() {
                       Audio & Entertainment
                     </p>
 
-                    {["Headphones", "Speakers", "Gaming"].map((item) => (
-                      <Link
-                        key={item}
-                        to="/shop"
-                        onClick={closeMobileMenu}
-                        className="block py-1.5 text-sm text-gray-500"
-                      >
-                        {item}
-                      </Link>
-                    ))}
+                    {["Headphones", "Speakers", "Gaming"].map(
+                      (item) => (
+                        <Link
+                          key={item}
+                          to="/shop"
+                          onClick={closeMobileMenu}
+                          className="block py-1.5 text-sm text-gray-500"
+                        >
+                          {item}
+                        </Link>
+                      ),
+                    )}
                   </div>
 
                   <div>
@@ -505,16 +667,18 @@ export default function Header() {
                       Accessories
                     </p>
 
-                    {["Cases", "Chargers", "Power Banks"].map((item) => (
-                      <Link
-                        key={item}
-                        to="/shop"
-                        onClick={closeMobileMenu}
-                        className="block py-1.5 text-sm text-gray-500"
-                      >
-                        {item}
-                      </Link>
-                    ))}
+                    {["Cases", "Chargers", "Power Banks"].map(
+                      (item) => (
+                        <Link
+                          key={item}
+                          to="/shop"
+                          onClick={closeMobileMenu}
+                          className="block py-1.5 text-sm text-gray-500"
+                        >
+                          {item}
+                        </Link>
+                      ),
+                    )}
                   </div>
                 </div>
               </div>
