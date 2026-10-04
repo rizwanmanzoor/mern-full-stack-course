@@ -26,6 +26,10 @@ function CartUI() {
       onClose={closeCart}
       itemCount={itemCount}
       subtotal={subtotal}
+      onCheckout={() => {
+        closeCart();
+        window.location.href = "/checkout";
+      }}
     >
       {cartItems.map((item) => (
         <CartItem

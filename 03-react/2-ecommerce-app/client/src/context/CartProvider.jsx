@@ -204,15 +204,11 @@ export function CartProvider({ children }) {
 
   const value = {
     cartItems: enrichedCartItems,
-
     itemCount,
     subtotal,
-
     isCartOpen,
-
     openCart,
     closeCart,
-
     addToCart,
     updateQuantity,
     removeFromCart,

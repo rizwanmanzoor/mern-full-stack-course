@@ -2,11 +2,11 @@ import xLogo from "@/assets/icons/x.svg";
 import facebookLogo from "@/assets/icons/facebook.svg";
 import instagramLogo from "@/assets/icons/instagram.svg";
 
-import visaLogo from "@/assets/payments/visa.svg";
-import amexLogo from "@/assets/payments/amex.svg";
-import paypalLogo from "@/assets/payments/paypal.svg";
-import wetunionLogo from "@/assets/payments/westunion.svg";
-import mastercardLogo from "@/assets/payments/mastercard.svg";
+import visaLogo from "@/assets/images/payments/visa.svg";
+import amexLogo from "@/assets/images/payments/amex.svg";
+import paypalLogo from "@/assets/images/payments/paypal.svg";
+import wetunionLogo from "@/assets/images/payments/westunion.svg";
+import mastercardLogo from "@/assets/images/payments/mastercard.svg";
 
 export const clothingLinks = [
   "Tops",
