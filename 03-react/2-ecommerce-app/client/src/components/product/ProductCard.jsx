@@ -1,16 +1,18 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Eye, Heart, Repeat2, ShoppingCart } from "lucide-react";
+import { Eye, Heart, ShoppingCart } from "lucide-react";
 
 import { useCart } from "@/context/cart/useCart";
 import { useWishlist } from "@/context/wishlist/useWishlist";
 
+import QuickViewModal from "@/components/product/QuickViewModal";
+
 export default function ProductCard({ product, className = "" }) {
   const { addToCart } = useCart();
 
-  const {
-    isInWishlist,
-    toggleWishlist,
-  } = useWishlist();
+  const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
+
+  const { isInWishlist, toggleWishlist } = useWishlist();
 
   const isWishlisted = isInWishlist(product.id);
 
@@ -128,13 +130,11 @@ export default function ProductCard({ product, className = "" }) {
             />
           </button>
 
-          {/* View */}
+          {/* Quick View */}
           <button
             type="button"
-            aria-label={`View ${product.name}`}
-            onClick={() => {
-              window.location.href = `/product/${product.id}`;
-            }}
+            onClick={() => setIsQuickViewOpen(true)}
+            aria-label={`Quick view ${product.name}`}
             className="
               inline-flex
               size-11
@@ -144,33 +144,14 @@ export default function ProductCard({ product, className = "" }) {
               border
               border-gray-300
               bg-white
+              text-gray-700
               transition-colors
               hover:border-primary/30
               hover:bg-primary/5
+              hover:text-primary
             "
           >
             <Eye size={20} strokeWidth={1.5} />
-          </button>
-
-          {/* Compare */}
-          <button
-            type="button"
-            aria-label={`Compare ${product.name}`}
-            className="
-              inline-flex
-              size-11
-              items-center
-              justify-center
-              rounded-full
-              border
-              border-gray-300
-              bg-white
-              transition-colors
-              hover:border-primary/30
-              hover:bg-primary/5
-            "
-          >
-            <Repeat2 size={20} strokeWidth={1.5} />
           </button>
         </div>
 
@@ -212,9 +193,7 @@ export default function ProductCard({ product, className = "" }) {
       {/* Product Info */}
       <div className="mx-2 mb-4">
         <h3 className="text-base font-medium text-gray-900">
-          <Link to={`/product/${product.id}`}>
-            {product.name}
-          </Link>
+          <Link to={`/product/${product.id}`}>{product.name}</Link>
         </h3>
 
         {product.originalPrice ? (
@@ -228,9 +207,7 @@ export default function ProductCard({ product, className = "" }) {
             </span>
           </div>
         ) : (
-          <span className="text-base text-gray-500">
-            ${product.price}
-          </span>
+          <span className="text-base text-gray-500">${product.price}</span>
         )}
       </div>
 
@@ -249,17 +226,19 @@ export default function ProductCard({ product, className = "" }) {
                 transition-all
                 duration-300
                 hover:border-primary
-                ${
-                  index === 0
-                    ? "ring-2 ring-primary ring-offset-2"
-                    : ""
-                }
+                ${index === 0 ? "ring-2 ring-primary ring-offset-2" : ""}
               `}
               style={{ backgroundColor: color }}
             />
           ))}
         </div>
       )}
+
+      <QuickViewModal
+        product={product}
+        isOpen={isQuickViewOpen}
+        onClose={() => setIsQuickViewOpen(false)}
+      />
     </article>
   );
 }
