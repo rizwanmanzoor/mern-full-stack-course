@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Heart, Star } from "lucide-react";
 
-import { useCart } from "@/context/useCart";
+import { useCart } from "@/context/cart/useCart";
+import { useWishlist } from "@/context/wishlist/useWishlist";
 
 function formatVariantLabel(type) {
   const labels = {
@@ -13,9 +14,7 @@ function formatVariantLabel(type) {
 
   return (
     labels[type] ||
-    type
-      .replace(/([A-Z])/g, " $1")
-      .replace(/^./, (char) => char.toUpperCase())
+    type.replace(/([A-Z])/g, " $1").replace(/^./, (char) => char.toUpperCase())
   );
 }
 
@@ -29,6 +28,10 @@ function getInitialVariants(product) {
 }
 
 export default function ProductInfo({ product }) {
+  const { isInWishlist, toggleWishlist } = useWishlist();
+
+  const isWishlisted = isInWishlist(product.id);
+
   const { addToCart, openCart } = useCart();
 
   const [quantity, setQuantity] = useState(1);
@@ -37,23 +40,21 @@ export default function ProductInfo({ product }) {
     product.colorOptions?.[0]?.slug ?? null,
   );
 
-  const [selectedVariants, setSelectedVariants] =
-    useState(() => getInitialVariants(product));
+  const [selectedVariants, setSelectedVariants] = useState(() =>
+    getInitialVariants(product),
+  );
 
   const discount =
     product.originalPrice && product.price
       ? Math.round(
-          ((product.originalPrice - product.price) /
-            product.originalPrice) *
+          ((product.originalPrice - product.price) / product.originalPrice) *
             100,
         )
       : null;
 
-  const isInStock =
-    product.availability === "in-stock";
+  const isInStock = product.availability === "in-stock";
 
-  const maxQuantity =
-    product.inventory?.quantity ?? Infinity;
+  const maxQuantity = product.inventory?.quantity ?? Infinity;
 
   const handleAddToCart = () => {
     if (!isInStock) {
@@ -134,22 +135,17 @@ export default function ProductInfo({ product }) {
       {/* Colors */}
       {product.colorOptions?.length > 0 && (
         <div>
-          <h3 className="mb-3 text-sm font-medium text-gray-900">
-            Color
-          </h3>
+          <h3 className="mb-3 text-sm font-medium text-gray-900">Color</h3>
 
           <div className="flex items-center gap-3">
             {product.colorOptions.map((color) => {
-              const isSelected =
-                selectedColor === color.slug;
+              const isSelected = selectedColor === color.slug;
 
               return (
                 <button
                   key={color.slug}
                   type="button"
-                  onClick={() =>
-                    setSelectedColor(color.slug)
-                  }
+                  onClick={() => setSelectedColor(color.slug)}
                   aria-label={`Select ${color.name}`}
                   aria-pressed={isSelected}
                   className={`size-8 rounded-full border transition ${
@@ -169,18 +165,14 @@ export default function ProductInfo({ product }) {
 
       {/* Product Variants */}
       {product.variantOptions?.map((variant) => (
-        <div
-          key={variant.type}
-          className="mt-6"
-        >
+        <div key={variant.type} className="mt-6">
           <h3 className="mb-3 text-sm font-medium text-gray-900">
             {formatVariantLabel(variant.type)}
           </h3>
 
           <div className="flex flex-wrap gap-2">
             {variant.values.map((value) => {
-              const isSelected =
-                selectedVariants[variant.type] === value;
+              const isSelected = selectedVariants[variant.type] === value;
 
               return (
                 <button
@@ -211,11 +203,7 @@ export default function ProductInfo({ product }) {
         <div className="flex h-12 w-fit items-center rounded-lg border border-gray-200">
           <button
             type="button"
-            onClick={() =>
-              setQuantity((current) =>
-                Math.max(1, current - 1),
-              )
-            }
+            onClick={() => setQuantity((current) => Math.max(1, current - 1))}
             disabled={!isInStock || quantity <= 1}
             className="flex h-full w-10 items-center justify-center text-gray-500 transition hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Decrease quantity"
@@ -230,13 +218,9 @@ export default function ProductInfo({ product }) {
           <button
             type="button"
             onClick={() =>
-              setQuantity((current) =>
-                Math.min(maxQuantity, current + 1),
-              )
+              setQuantity((current) => Math.min(maxQuantity, current + 1))
             }
-            disabled={
-              !isInStock || quantity >= maxQuantity
-            }
+            disabled={!isInStock || quantity >= maxQuantity}
             className="flex h-full w-10 items-center justify-center text-gray-500 transition hover:text-gray-900 disabled:cursor-not-allowed disabled:opacity-40"
             aria-label="Increase quantity"
           >
@@ -251,19 +235,28 @@ export default function ProductInfo({ product }) {
             disabled={!isInStock}
             className="flex h-12 flex-1 items-center justify-center rounded-lg bg-primary px-6 text-sm font-medium text-white transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:bg-gray-300"
           >
-            {isInStock
-              ? "Add to cart"
-              : "Out of stock"}
+            {isInStock ? "Add to cart" : "Out of stock"}
           </button>
 
           <button
             type="button"
-            aria-label="Add to wishlist"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-gray-200 text-gray-600 transition hover:border-primary hover:text-primary"
+            onClick={() => toggleWishlist(product.id)}
+            aria-label={
+              isWishlisted
+                ? `Remove ${product.name} from wishlist`
+                : `Add ${product.name} to wishlist`
+            }
+            aria-pressed={isWishlisted}
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border transition ${
+              isWishlisted
+                ? "border-primary bg-primary/5 text-primary"
+                : "border-gray-200 text-gray-600 hover:border-primary hover:text-primary"
+            }`}
           >
             <Heart
               size={19}
               strokeWidth={1.5}
+              fill={isWishlisted ? "currentColor" : "none"}
             />
           </button>
         </div>
@@ -273,16 +266,12 @@ export default function ProductInfo({ product }) {
       <div className="mt-5 flex items-center gap-2 text-sm">
         <span
           className={`size-2 rounded-full ${
-            isInStock
-              ? "bg-green-500"
-              : "bg-red-500"
+            isInStock ? "bg-green-500" : "bg-red-500"
           }`}
         />
 
         <span className="text-gray-500">
-          {isInStock
-            ? "In stock"
-            : "Out of stock"}
+          {isInStock ? "In stock" : "Out of stock"}
         </span>
 
         {isInStock &&

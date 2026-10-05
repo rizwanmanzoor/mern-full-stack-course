@@ -7,7 +7,7 @@ import PaymentMethod from "@/components/checkout/PaymentMethod";
 import DeliveryOptions from "@/components/checkout/DeliveryOptions";
 import CustomerInformation from "@/components/checkout/CustomerInformation";
 
-import { useCart } from "@/context/useCart";
+import { useCart } from "@/context/cart/useCart";
 import { useAuth } from "@/context/auth/useAuth";
 import { saveOrder } from "@/utils/orderStorage";
 

@@ -5,7 +5,7 @@ import {
 } from "react";
 
 import products from "@/data/products.json";
-import { CartContext } from "@/context/CartContext";
+import { CartContext } from "@/context/cart/CartContext";
 
 const CART_STORAGE_KEY = "techshelf-cart";
 

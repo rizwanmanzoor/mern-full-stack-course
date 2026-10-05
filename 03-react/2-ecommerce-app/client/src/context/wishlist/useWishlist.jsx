@@ -1,0 +1,15 @@
+import { useContext } from "react";
+
+import { WishlistContext } from "@/context/wishlist/WishlistContext";
+
+export function useWishlist() {
+  const context = useContext(WishlistContext);
+
+  if (!context) {
+    throw new Error(
+      "useWishlist must be used inside a WishlistProvider",
+    );
+  }
+
+  return context;
+}

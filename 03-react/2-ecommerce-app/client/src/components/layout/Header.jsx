@@ -21,21 +21,23 @@ import {
 import ProductMegaMenu from "@/components/layout/ProductMegaMenu";
 
 import { useAuth } from "@/context/auth/useAuth";
-import { useCart } from "@/context/useCart";
+import { useCart } from "@/context/cart/useCart";
+import { useWishlist } from "@/context/wishlist/useWishlist";
 
 import { currencies, languages } from "@/data/header";
 
 export default function Header() {
   const { itemCount, openCart } = useCart();
+
+  const { itemCount: wishlistCount, openWishlist } = useWishlist();
+
   const { user, isAuthenticated, logout } = useAuth();
 
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams] = useSearchParams();
 
-  const [searchQuery, setSearchQuery] = useState(
-    searchParams.get("q") ?? "",
-  );
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("q") ?? "");
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
@@ -398,7 +400,6 @@ export default function Header() {
                   className="inline-flex items-center gap-1 px-3.5 py-7 text-base font-medium text-gray-900 transition-colors group-hover:text-primary"
                 >
                   Products
-
                   <ChevronDown className="transition-transform duration-200 group-hover:rotate-180" />
                 </NavLink>
 
@@ -413,7 +414,6 @@ export default function Header() {
                 className="flex items-center gap-1 px-3.5 py-7 text-base font-medium text-gray-800 transition-colors hover:text-primary"
               >
                 Sale
-
                 <span className="inline-flex h-5 items-center justify-center rounded-full bg-primary/10 px-2 text-xs font-medium text-primary">
                   20% OFF
                 </span>
@@ -424,10 +424,17 @@ export default function Header() {
             <div className="flex items-center gap-2.5 lg:gap-3">
               <button
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700 transition hover:text-gray-900 lg:h-11 lg:w-11"
+                onClick={openWishlist}
+                className="relative inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700 transition hover:text-gray-900 lg:h-11 lg:w-11"
                 aria-label="Wishlist"
               >
                 <Heart size={20} />
+
+                {wishlistCount > 0 && (
+                  <span className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-white">
+                    {wishlistCount}
+                  </span>
+                )}
               </button>
 
               <button
@@ -545,21 +552,24 @@ export default function Header() {
 
             {/* Logo */}
             <Link to="/" onClick={closeMobileMenu}>
-              <img
-                src="/logo.svg"
-                alt="TechShelf"
-                className="h-9 w-auto"
-              />
+              <img src="/logo.svg" alt="TechShelf" className="h-9 w-auto" />
             </Link>
 
             {/* Mobile actions */}
             <div className="flex items-center gap-2">
               <button
                 type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700"
+                onClick={openWishlist}
+                className="relative inline-flex h-10 w-10 items-center justify-center rounded-radius border border-gray-200 text-gray-700"
                 aria-label="Wishlist"
               >
                 <Heart size={20} />
+
+                {wishlistCount > 0 && (
+                  <span className="absolute -right-1 -top-1 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-semibold text-white">
+                    {wishlistCount}
+                  </span>
+                )}
               </button>
 
               <button
@@ -604,9 +614,7 @@ export default function Header() {
             <div>
               <button
                 type="button"
-                onClick={() =>
-                  setMobileProductsOpen((prev) => !prev)
-                }
+                onClick={() => setMobileProductsOpen((prev) => !prev)}
                 className="flex w-full items-center justify-between py-3 text-left text-base font-medium text-gray-900"
               >
                 <span>Products</span>
@@ -629,18 +637,16 @@ export default function Header() {
                       Smart Devices
                     </p>
 
-                    {["Smartphones", "Laptops", "Tablets"].map(
-                      (item) => (
-                        <Link
-                          key={item}
-                          to="/shop"
-                          onClick={closeMobileMenu}
-                          className="block py-1.5 text-sm text-gray-500"
-                        >
-                          {item}
-                        </Link>
-                      ),
-                    )}
+                    {["Smartphones", "Laptops", "Tablets"].map((item) => (
+                      <Link
+                        key={item}
+                        to="/shop"
+                        onClick={closeMobileMenu}
+                        className="block py-1.5 text-sm text-gray-500"
+                      >
+                        {item}
+                      </Link>
+                    ))}
                   </div>
 
                   <div>
@@ -648,18 +654,16 @@ export default function Header() {
                       Audio & Entertainment
                     </p>
 
-                    {["Headphones", "Speakers", "Gaming"].map(
-                      (item) => (
-                        <Link
-                          key={item}
-                          to="/shop"
-                          onClick={closeMobileMenu}
-                          className="block py-1.5 text-sm text-gray-500"
-                        >
-                          {item}
-                        </Link>
-                      ),
-                    )}
+                    {["Headphones", "Speakers", "Gaming"].map((item) => (
+                      <Link
+                        key={item}
+                        to="/shop"
+                        onClick={closeMobileMenu}
+                        className="block py-1.5 text-sm text-gray-500"
+                      >
+                        {item}
+                      </Link>
+                    ))}
                   </div>
 
                   <div>
@@ -667,18 +671,16 @@ export default function Header() {
                       Accessories
                     </p>
 
-                    {["Cases", "Chargers", "Power Banks"].map(
-                      (item) => (
-                        <Link
-                          key={item}
-                          to="/shop"
-                          onClick={closeMobileMenu}
-                          className="block py-1.5 text-sm text-gray-500"
-                        >
-                          {item}
-                        </Link>
-                      ),
-                    )}
+                    {["Cases", "Chargers", "Power Banks"].map((item) => (
+                      <Link
+                        key={item}
+                        to="/shop"
+                        onClick={closeMobileMenu}
+                        className="block py-1.5 text-sm text-gray-500"
+                      >
+                        {item}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -691,7 +693,6 @@ export default function Header() {
               className="flex items-center gap-2 py-3 text-base font-medium text-gray-900"
             >
               Sale
-
               <span className="inline-flex h-5 items-center justify-center rounded-full bg-primary/10 px-2 text-xs font-medium text-primary">
                 20% OFF
               </span>
