@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/react";
+import { useNavigate } from "react-router-dom";
 
 import { useCart } from "@/context/cart/useCart";
 import { useWishlist } from "@/context/wishlist/useWishlist";
@@ -14,6 +15,7 @@ import CartDrawer from "@/components/cart/CartDrawer";
 import WishlistDrawer from "@/components/wishlist/WishlistDrawer";
 
 function CartUI() {
+  const navigate = useNavigate();
   const {
     isCartOpen,
     closeCart,
@@ -32,7 +34,7 @@ function CartUI() {
       subtotal={subtotal}
       onCheckout={() => {
         closeCart();
-        window.location.href = "/checkout";
+        navigate("/checkout");
       }}
     >
       {cartItems.map((item) => (
