@@ -33,13 +33,15 @@ export function createOrder({
       sameAsBilling: formData.sameAsBilling,
     },
 
+    // Product snapshot
     items: cartItems.map((item) => ({
       productId: item.productId,
       productName: item.product.name,
+      productImage: item.product.images?.[0] ?? null,
       quantity: item.quantity,
       price: item.product.price,
-      selectedColor: item.selectedColor,
-      selectedVariants: item.selectedVariants,
+      selectedColor: item.selectedColor ?? null,
+      selectedVariants: item.selectedVariants ?? {},
     })),
 
     delivery: {

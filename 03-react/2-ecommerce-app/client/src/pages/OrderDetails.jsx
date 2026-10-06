@@ -83,9 +83,7 @@ export default function OrderDetails() {
               <div className="mb-5 flex items-center gap-2">
                 <Package size={20} className="text-gray-700" />
 
-                <h2 className="font-semibold text-gray-900">
-                  Order Items
-                </h2>
+                <h2 className="font-semibold text-gray-900">Order Items</h2>
               </div>
 
               <div className="divide-y divide-gray-100">
@@ -94,10 +92,20 @@ export default function OrderDetails() {
                     key={`${item.productId}-${item.quantity}`}
                     className="flex gap-4 py-4 first:pt-0 last:pb-0"
                   >
-                    <div className="flex size-20 shrink-0 items-center justify-center rounded-lg bg-gray-50">
-                      <span className="text-xs text-gray-400">
-                        Product
-                      </span>
+                    <div className="size-20 shrink-0 overflow-hidden rounded-lg bg-gray-50">
+                      {item.productImage ? (
+                        <img
+                          src={item.productImage}
+                          alt={item.productName}
+                          className="h-full w-full object-contain"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center">
+                          <span className="text-xs text-gray-400">
+                            No Image
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -114,6 +122,15 @@ export default function OrderDetails() {
                           Color: {item.selectedColor}
                         </p>
                       )}
+
+                      {item.selectedVariants &&
+                        Object.entries(item.selectedVariants).map(
+                          ([key, value]) => (
+                            <p key={key} className="mt-1 text-xs text-gray-500">
+                              {key}: {value}
+                            </p>
+                          ),
+                        )}
                     </div>
 
                     <p className="shrink-0 text-sm font-medium text-gray-900">
@@ -146,9 +163,7 @@ export default function OrderDetails() {
                 </p>
 
                 {order.customer.additionalInformation && (
-                  <p className="pt-2">
-                    {order.customer.additionalInformation}
-                  </p>
+                  <p className="pt-2">{order.customer.additionalInformation}</p>
                 )}
               </div>
             </div>
@@ -159,9 +174,7 @@ export default function OrderDetails() {
                 <div className="mb-4 flex items-center gap-2">
                   <Truck size={20} className="text-gray-700" />
 
-                  <h2 className="font-semibold text-gray-900">
-                    Delivery
-                  </h2>
+                  <h2 className="font-semibold text-gray-900">Delivery</h2>
                 </div>
 
                 <p className="text-sm font-medium capitalize text-gray-900">
@@ -177,9 +190,7 @@ export default function OrderDetails() {
                 <div className="mb-4 flex items-center gap-2">
                   <CreditCard size={20} className="text-gray-700" />
 
-                  <h2 className="font-semibold text-gray-900">
-                    Payment
-                  </h2>
+                  <h2 className="font-semibold text-gray-900">Payment</h2>
                 </div>
 
                 <p className="text-sm font-medium capitalize text-gray-900">
