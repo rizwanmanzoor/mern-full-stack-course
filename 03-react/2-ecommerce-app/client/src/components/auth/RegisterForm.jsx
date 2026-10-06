@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 import { useAuth } from "@/context/auth/useAuth";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 export default function RegisterForm() {
   const { register } = useAuth();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+
+  const redirect = searchParams.get("redirect") || "/";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -14,11 +19,9 @@ export default function RegisterForm() {
 
   const [error, setError] = useState("");
 
-  const [showPassword, setShowPassword] =
-    useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-  const [showConfirmPassword, setShowConfirmPassword] =
-    useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,27 +37,15 @@ export default function RegisterForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const {
-      name,
-      email,
-      password,
-      confirmPassword,
-    } = formData;
+    const { name, email, password, confirmPassword } = formData;
 
-    if (
-      !name.trim() ||
-      !email.trim() ||
-      !password ||
-      !confirmPassword
-    ) {
+    if (!name.trim() || !email.trim() || !password || !confirmPassword) {
       setError("Please fill in all fields.");
       return;
     }
 
     if (password.length < 6) {
-      setError(
-        "Password must be at least 6 characters.",
-      );
+      setError("Password must be at least 6 characters.");
       return;
     }
 
@@ -69,16 +60,20 @@ export default function RegisterForm() {
         email,
         password,
       });
+
+      const loginUrl =
+        redirect === "/"
+          ? "/login"
+          : `/login?redirect=${encodeURIComponent(redirect)}`;
+
+      navigate(loginUrl);
     } catch (registrationError) {
       setError(registrationError.message);
     }
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="space-y-5"
-    >
+    <form onSubmit={handleSubmit} className="space-y-5">
       {/* Name */}
       <div>
         <label
@@ -144,21 +139,11 @@ export default function RegisterForm() {
 
           <button
             type="button"
-            onClick={() =>
-              setShowPassword((current) => !current)
-            }
-            aria-label={
-              showPassword
-                ? "Hide password"
-                : "Show password"
-            }
+            onClick={() => setShowPassword((current) => !current)}
+            aria-label={showPassword ? "Hide password" : "Show password"}
             className="absolute right-3 top-1/2 flex size-8 -translate-y-1/2 items-center justify-center text-gray-400 transition-colors hover:text-gray-700"
           >
-            {showPassword ? (
-              <EyeOff size={18} />
-            ) : (
-              <Eye size={18} />
-            )}
+            {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
           </button>
         </div>
       </div>
@@ -176,11 +161,7 @@ export default function RegisterForm() {
           <input
             id="confirmPassword"
             name="confirmPassword"
-            type={
-              showConfirmPassword
-                ? "text"
-                : "password"
-            }
+            type={showConfirmPassword ? "text" : "password"}
             value={formData.confirmPassword}
             onChange={handleChange}
             placeholder="Confirm your password"
@@ -190,33 +171,17 @@ export default function RegisterForm() {
 
           <button
             type="button"
-            onClick={() =>
-              setShowConfirmPassword(
-                (current) => !current,
-              )
-            }
-            aria-label={
-              showConfirmPassword
-                ? "Hide password"
-                : "Show password"
-            }
+            onClick={() => setShowConfirmPassword((current) => !current)}
+            aria-label={showConfirmPassword ? "Hide password" : "Show password"}
             className="absolute right-3 top-1/2 flex size-8 -translate-y-1/2 items-center justify-center text-gray-400 transition-colors hover:text-gray-700"
           >
-            {showConfirmPassword ? (
-              <EyeOff size={18} />
-            ) : (
-              <Eye size={18} />
-            )}
+            {showConfirmPassword ? <EyeOff size={18} /> : <Eye size={18} />}
           </button>
         </div>
       </div>
 
       {/* Error */}
-      {error && (
-        <p className="text-sm text-red-500">
-          {error}
-        </p>
-      )}
+      {error && <p className="text-sm text-red-500">{error}</p>}
 
       {/* Submit */}
       <button
