@@ -1,4 +1,4 @@
-# Full-Stack MERN
+# MERN Full Stack Development
 
 A centralized repository documenting my hands-on code exploration, architectural experiments, and progressive implementation across modern web technologies—ranging from core frontend fundamentals to full-stack MERN (MongoDB, Express.js, React, Node.js) development.
 
