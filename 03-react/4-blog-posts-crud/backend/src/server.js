@@ -23,6 +23,16 @@ app.get("/api/health", (req, res) => {
   res.json({ message: "Blog Posts API is running" });
 });
 
+// Connect to MongoDB before handling posts requests
+app.use("/api/posts", async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (error) {
+    next(error);
+  }
+});
+
 app.use("/api/posts", postRoutes);
 
 // Keep error handling after routes.
