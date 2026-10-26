@@ -1,0 +1,58 @@
+export const TrendingProducts = [
+   {
+      id: 1,
+      name: "Lexicon Luxe",
+      price: "$10",
+      image: "https://readymadeui.com/images/product1.webp",
+      alt: "Lexicon Luxe t-shirt",
+   },
+   {
+      id: 2,
+      name: "Adjective Attire",
+      price: "$12",
+      image: "https://readymadeui.com/images/product2.webp",
+      alt: "Adjective Attire t-shirt",
+   },
+   {
+      id: 3,
+      name: "ThreadCraft Vibes",
+      price: "$14",
+      image: "https://readymadeui.com/images/product3.webp",
+      alt: "ThreadCraft Vibes t-shirt",
+   },
+   {
+      id: 4,
+      name: "Verbal Vogue Tees",
+      price: "$12",
+      image: "https://readymadeui.com/images/product7.webp",
+      alt: "Verbal Vogue t-shirt",
+   },
+   {
+      id: 5,
+      name: "Jargon Jungle",
+      price: "$15",
+      image: "https://readymadeui.com/images/product5.webp",
+      alt: "Jargon Jungle t-shirt",
+   },
+   {
+      id: 6,
+      name: "Syllable Streetwear",
+      price: "$14",
+      image: "https://readymadeui.com/images/product6.webp",
+      alt: "Syllable Streetwear t-shirt",
+   },
+   {
+      id: 7,
+      name: "Syllable Streetwear",
+      price: "$14",
+      image: "https://readymadeui.com/images/product1.webp",
+      alt: "Syllable Streetwear variant t-shirt",
+   },
+   {
+      id: 8,
+      name: "Syllable Streetwear",
+      price: "$14",
+      image: "https://readymadeui.com/images/product2.webp",
+      alt: "Syllable Streetwear alternate t-shirt",
+   },
+];
