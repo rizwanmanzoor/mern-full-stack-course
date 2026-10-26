@@ -20,7 +20,7 @@ app.use(
 app.use(express.json());
 
 app.get("/api/health", (req, res) => {
-  res.json({ message: "RTK Query practice API is running" });
+  res.json({ message: "Blog Posts API is running" });
 });
 
 app.use("/api/posts", postRoutes);
@@ -28,14 +28,19 @@ app.use("/api/posts", postRoutes);
 // Keep error handling after routes.
 app.use(errorHandler);
 
-async function startServer() {
-  await connectDB();
-  app.listen(PORT, () => {
-    console.log(`API running at http://localhost:${PORT}`);
-  });
-}
+// Export app for Vercel
+module.exports = app;
 
-startServer().catch((error) => {
-  console.error("Could not start server:", error.message);
-  process.exit(1);
-});
+// Start local development server only
+if (require.main === module) {
+  connectDB()
+    .then(() => {
+      app.listen(PORT, () => {
+        console.log(`API running at http://localhost:${PORT}`);
+      });
+    })
+    .catch((error) => {
+      console.error("Could not start server:", error.message);
+      process.exit(1);
+    });
+}
